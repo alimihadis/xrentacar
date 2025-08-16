@@ -77,56 +77,146 @@ const TRANSLATIONS = {
 
         // About Us Section
         about: {
-            title: 'Rreth Nesh',
+            title: 'Rrëfimi Ynë',
             subtitle: 'Kompania më e besueshme e qirasë së makinave në Maqedoni',
-            story: 'X Car Rental u themelua me vizionin për të ofruar shërbimin më të mirë të qirasë së makinave në Maqedoni. Me eksperiencën tonë të gjatë dhe flotën moderne, ofrojmë eksperiencën më të mirë të qirasë së makinave.',
+            story: 'X Car Rental është kompania më e besueshme për qira makinash në Maqedoni. Me eksperiencën tonë të gjatë dhe flotën moderne, ofrojmë eksperiencën më të mirë të qirasë së makinave.',
+            story2: 'Që nga viti 2019, kemi shërbyer më shumë se 1000 klientë të kënaqur dhe kemi ndërtuar një reputacion të fortë për cilësi, besueshmëri dhe shërbim të shkëlqyeshëm.',
             stats: {
-                experience: '+ Vjet Eksperiencë',
+                experience: '+ Vite Eksperiencë',
                 clients: '+ Klientë të Kënaqur',
                 cars: '+ Makina Premium',
                 support: '/7 Mbështetje'
             },
             timeline: {
-                year2019: 'Fillimi i Udhëtimit',
-                year2024: 'Lider i Tregut'
+                title: 'Rruga Jonë e Suksesit',
+                year2019: {
+                    year: '2019',
+                    title: 'Fillimi i Rrugës',
+                    desc: 'X Car Rental u themelua me vizionin për të ofruar shërbimin më të mirë të qirasë së makinave në Maqedoni.'
+                },
+                year2021: {
+                    year: '2021',
+                    title: 'Rritja e Flotës',
+                    desc: 'Flota jonë u zgjerua me makina të reja dhe teknologji të avancuar për të përmirësuar eksperiencën e klientëve.'
+                },
+                year2023: {
+                    year: '2023',
+                    title: 'Ekspansioni i Shërbimeve',
+                    desc: 'Filluam të ofrojmë shërbime të reja si transfer aeroporti dhe qira afatgjatë për bizneset.'
+                },
+                year2024: {
+                    year: '2024',
+                    title: 'Lideri i Tregut',
+                    desc: 'U bëmë kompania më e besueshme dhe e preferuar për qira makinash në Maqedoni me mbi 1000 klientë të kënaqur.'
+                }
             },
             values: {
-                quality: {
-                    title: 'Cilësia',
-                    desc: 'Ofrojmë shërbime në standardet më të larta'
+                title: 'Vlerat Tona Themelore',
+                security: {
+                    title: 'Siguria',
+                    clickText: 'Klikoni për më shumë',
+                    details: [
+                        'Makina të siguruara plotësisht',
+                        'Kontroll teknike të rregullta',
+                        'Siguri maksimale për klientët',
+                        'Procedura të sigurisë të përmirësuara'
+                    ]
                 },
                 reliability: {
                     title: 'Besueshmëria',
-                    desc: 'Klientët tanë mund të na besojnë'
+                    clickText: 'Klikoni për më shumë',
+                    details: [
+                        '5+ vite eksperiencë në treg',
+                        '1000+ klientë të kënaqur',
+                        'Shërbim konsistent dhe i besueshëm',
+                        'Përgjegjësi për çdo detaj'
+                    ]
                 },
-                innovation: {
-                    title: 'Inovacioni',
-                    desc: 'Përmirësim i vazhdueshëm dhe inovacion'
+                transparency: {
+                    title: 'Transparenca',
+                    clickText: 'Klikoni për më shumë',
+                    details: [
+                        'Çmime të qarta pa fshehura',
+                        'Kontrata të detajuara',
+                        'Informim i plotë për klientët',
+                        'Komunikim i hapur dhe i ndershëm'
+                    ]
+                },
+                quality: {
+                    title: 'Cilësia',
+                    clickText: 'Klikoni për më shumë',
+                    details: [
+                        'Makina të reja dhe të mirëmbajtura',
+                        'Shërbim 5 yje për klientët',
+                        'Teknologji moderne dhe e avancuar',
+                        'Eksperiencë e jashtëzakonshme'
+                    ]
                 }
             },
             mission: {
                 title: 'Misioni Ynë',
-                desc: 'Të ofrojmë eksperiencën më të mirë të qirasë së makinave në Maqedoni, duke kombinuar teknologjinë moderne me shërbimin personal dhe çmimet më konkurruese në treg.'
+                desc: 'Ofrojmë eksperiencën më të mirë të qirasë së makinave në Maqedoni, duke kombinuar teknologjinë moderne me shërbimin personal dhe çmimet më të konkurruese në treg.',
+                expand: 'Kemi angazhuar të përmirësojmë vazhdimisht shërbimet tona, të zgjerojmë flotën dhe të ofrojmë mbështetje të shkëlqyeshme për çdo klient.'
             },
             vision: {
                 title: 'Vizioni Ynë',
-                desc: 'Të jemi liderë në sektorin e qirasë së makinave në Maqedoni dhe të vendosim standarde për kënaqësinë e klientëve.'
+                desc: 'Të bëhemi kompania më e njohur dhe e besueshme për qira makinash në rajon, duke u zgjeruar në tregjet e reja dhe duke mbajtur standardet e larta të cilësisë.',
+                expand: 'Synojmë të krijojmë një rrjet të gjerë shërbimesh që të përmbushim nevojat e të gjitha llojeve të klientëve, nga turistët individual deri te korporatat e mëdha.'
+            },
+            whyChoose: {
+                title: 'Pse të Na Zgjidhni Ne?',
+                provenExperience: {
+                    title: 'Eksperiencë e Provuar',
+                    desc: '5+ vite eksperiencë në treg me njohuri të thella për nevojat e klientëve.'
+                },
+                regularMaintenance: {
+                    title: 'Mirëmbajtje e Rregullt',
+                    desc: 'Të gjitha makinat tona kalojnë kontroll teknike të rregullta për sigurinë maksimale.'
+                },
+                support247: {
+                    title: 'Mbështetje 24/7',
+                    desc: 'Ekipi ynë është gjithmonë i disponueshëm për të ju ndihmuar me çdo pyetje ose problem.'
+                },
+                competitivePrices: {
+                    title: 'Çmime Konkurruese',
+                    desc: 'Ofrojmë çmimet më të mira në treg me fleksibilitet maksimal për klientët tanë.'
+                }
             }
         },
 
         // Location Section
         location: {
             title: 'Lokacioni Ynë',
-            subtitle: 'Na vizitoni ose lidhuni me ne',
-            address: 'Rruga Ilindenska Nr. 25, 1000 Shkup, Maqedoni',
-            phone: 'Telefoni',
-            directions: 'Merr Udhëzime',
-            call: 'Thirr'
+            subtitle: 'Na vizitoni në zyrën tonë për informata të detajuara dhe kontrata',
+            office: {
+                title: 'X Car Rental - Zyra Kryesore',
+                address: {
+                    label: 'Adresa',
+                    value: 'Rruga Ilindenska Nr. 25, 1000 Shkup, Maqedoni'
+                },
+                workingHours: {
+                    label: 'Orari i Punës',
+                    value: 'E Hënë - E Premte: 08:00 - 20:00, E Shtunë: 09:00 - 18:00, E Dielë: 10:00 - 16:00'
+                },
+                phone: {
+                    label: 'Telefoni',
+                    value: '+389 71 294 914'
+                },
+                email: {
+                    label: 'Email',
+                    value: 'info@xcarrental.com, rezervime@xcarrental.com'
+                }
+            },
+            actions: {
+                directions: 'Merrni Udhëzimet',
+                call: 'Telefononi'
+            }
         },
 
         // Footer
         footer: {
-            description: 'Kompania më e besueshme e qirasë së makinave në Maqedoni. Ofrojmë eksperiencë të jashtëzakonshme me çmime të arsyeshme.',
+            companyName: 'X CAR RENTAL',
+            description: 'Kompania më e besueshme për qira makinash në Maqedoni',
             quickLinks: 'Lidhje të Shpejta',
             services: 'Shërbimet',
             contact: 'Kontakti',
@@ -138,9 +228,9 @@ const TRANSLATIONS = {
             followUs: 'Na ndiqni',
             whatsappBtn: 'Rezervo në WhatsApp',
             available247: 'Orari: 24/7 i disponueshëm',
-            privacyPolicy: 'Privacy Policy',
-            termsService: 'Terms of Service',
-            madeWithLove: 'Made with ❤️ in Macedonia',
+            privacyPolicy: 'Politika e Privatësisë',
+            termsService: 'Kushtet e Shërbimit',
+            madeWithLove: 'Bërë me ❤️ në Maqedoni',
             // Company Stats & Address
             experience: '5+ vite eksperiencë',
             clients: '1000+ klientë të kënaqur',
@@ -153,7 +243,16 @@ const TRANSLATIONS = {
             serviceSupport: 'Mbështetje gjatë gjithë kohës',
             // Contact
             phone: '+389 71 294 914',
-            email: 'info@xcarrental.com'
+            email: 'info@xcarrental.com',
+            // Quick Links
+            home: 'Ballina',
+            cars: 'Makinat',
+            about: 'Rreth Nesh',
+            features: 'Shërbimet',
+            location: 'Lokacioni',
+            pricing: 'Çmimet',
+            terms: 'Termat dhe Kushtet',
+            faq: 'FAQ'
         }
     },
 
@@ -223,9 +322,10 @@ const TRANSLATIONS = {
 
         // About Us Section
         about: {
-            title: 'Hakkımızda',
+            title: 'Hikayemiz',
             subtitle: 'Makedonya\'da en güvenilir araç kiralama şirketi',
-            story: 'X Car Rental, Makedonya\'da en iyi araç kiralama hizmetini sunma vizyonuyla kuruldu. Uzun deneyimimiz ve modern filosu ile en iyi araç kiralama deneyimini sunuyoruz.',
+            story: 'X Car Rental, Makedonya\'da en güvenilir araç kiralama şirketidir. Uzun deneyimimiz ve modern filosu ile en iyi araç kiralama deneyimini sunuyoruz.',
+            story2: '2019 yılından bu yana, 1000\'den fazla memnun müşteriye hizmet verdik ve kalite, güvenilirlik ve mükemmel hizmet konusunda güçlü bir itibar inşa ettik.',
             stats: {
                 experience: '+ Yıl Deneyim',
                 clients: '+ Memnun Müşteri',
@@ -233,46 +333,135 @@ const TRANSLATIONS = {
                 support: '/7 Destek'
             },
             timeline: {
-                year2019: 'Yolculuğun Başlangıcı',
-                year2024: 'Pazar Lideri'
+                title: 'Başarı Yolumuz',
+                year2019: {
+                    year: '2019',
+                    title: 'Yolculuğun Başlangıcı',
+                    desc: 'X Car Rental, Makedonya\'da en iyi araç kiralama hizmetini sunma vizyonuyla kuruldu.'
+                },
+                year2021: {
+                    year: '2021',
+                    title: 'Filo Büyümesi',
+                    desc: 'Filosu yeni araçlar ve gelişmiş teknoloji ile genişletildi, müşteri deneyimini iyileştirmek için.'
+                },
+                year2023: {
+                    year: '2023',
+                    title: 'Hizmet Genişlemesi',
+                    desc: 'Havalimanı transferi ve işletmeler için uzun vadeli kiralama gibi yeni hizmetler sunmaya başladık.'
+                },
+                year2024: {
+                    year: '2024',
+                    title: 'Pazar Lideri',
+                    desc: '1000\'den fazla memnun müşteri ile Makedonya\'da en güvenilir ve tercih edilen araç kiralama şirketi haline geldik.'
+                }
             },
             values: {
-                quality: {
-                    title: 'Kalite',
-                    desc: 'En yüksek standartlarda hizmet sunuyoruz'
+                title: 'Temel Değerlerimiz',
+                security: {
+                    title: 'Güvenlik',
+                    clickText: 'Daha fazlası için tıklayın',
+                    details: [
+                        'Tamamen sigortalı araçlar',
+                        'Düzenli teknik kontroller',
+                        'Müşteriler için maksimum güvenlik',
+                        'Geliştirilmiş güvenlik prosedürleri'
+                    ]
                 },
                 reliability: {
                     title: 'Güvenilirlik',
-                    desc: 'Müşterilerimiz bize güvenebilir'
+                    clickText: 'Daha fazlası için tıklayın',
+                    details: [
+                        'Pazarda 5+ yıl deneyim',
+                        '1000+ memnun müşteri',
+                        'Tutarlı ve güvenilir hizmet',
+                        'Her detay için sorumluluk'
+                    ]
                 },
-                innovation: {
-                    title: 'Yenilik',
-                    desc: 'Sürekli gelişim ve yenilik'
+                transparency: {
+                    title: 'Şeffaflık',
+                    clickText: 'Daha fazlası için tıklayın',
+                    details: [
+                        'Gizli ücret olmadan net fiyatlar',
+                        'Detaylı sözleşmeler',
+                        'Müşteriler için tam bilgilendirme',
+                        'Açık ve dürüst iletişim'
+                    ]
+                },
+                quality: {
+                    title: 'Kalite',
+                    clickText: 'Daha fazlası için tıklayın',
+                    details: [
+                        'Yeni ve bakımlı araçlar',
+                        'Müşteriler için 5 yıldızlı hizmet',
+                        'Modern ve gelişmiş teknoloji',
+                        'Olağanüstü deneyim'
+                    ]
                 }
             },
             mission: {
                 title: 'Misyonumuz',
-                desc: 'Makedonya\'da en iyi araç kiralama deneyimini sunmak, modern teknolojiyi kişisel hizmet ve pazardaki en rekabetçi fiyatlarla birleştirerek.'
+                desc: 'Makedonya\'da en iyi araç kiralama deneyimini sunmak, modern teknolojiyi kişisel hizmet ve pazardaki en rekabetçi fiyatlarla birleştirerek.',
+                expand: 'Hizmetlerimizi sürekli iyileştirmeye, filosu genişletmeye ve her müşteri için mükemmel destek sunmaya taahhüt ettik.'
             },
             vision: {
                 title: 'Vizyonumuz',
-                desc: 'Makedonya\'da araç kiralama sektöründe lider olmak ve müşteri memnuniyetinde standart belirlemek.'
+                desc: 'Makedonya\'da araç kiralama sektöründe lider olmak ve yüksek kalite standartlarını koruyarak yeni pazarlara genişlemek.',
+                expand: 'Bireysel turistlerden büyük şirketlere kadar tüm müşteri türlerinin ihtiyaçlarını karşılayan geniş bir hizmet ağı oluşturmayı hedefliyoruz.'
+            },
+            whyChoose: {
+                title: 'Neden Bizi Seçmelisiniz?',
+                provenExperience: {
+                    title: 'Kanıtlanmış Deneyim',
+                    desc: 'Müşteri ihtiyaçları konusunda derin bilgi ile pazarda 5+ yıl deneyim.'
+                },
+                regularMaintenance: {
+                    title: 'Düzenli Bakım',
+                    desc: 'Tüm araçlarımız maksimum güvenlik için düzenli teknik kontrollerden geçer.'
+                },
+                support247: {
+                    title: '7/24 Destek',
+                    desc: 'Ekibimiz herhangi bir soru veya problem için her zaman yardıma hazır.'
+                },
+                competitivePrices: {
+                    title: 'Rekabetçi Fiyatlar',
+                    desc: 'Müşterilerimiz için maksimum esneklik ile pazardaki en iyi fiyatları sunuyoruz.'
+                }
             }
         },
 
         // Location Section
         location: {
             title: 'Konumumuz',
-            subtitle: 'Bizi ziyaret edin veya iletişime geçin',
-            address: 'Rruga Ilindenska Nr. 25, 1000 Üsküp, Makedonya',
-            phone: 'Telefon',
-            directions: 'Yol Tarifi Al',
-            call: 'Ara'
+            subtitle: 'Detaylı bilgi ve sözleşme için ofisimizi ziyaret edin',
+            office: {
+                title: 'X Car Rental - Ana Ofis',
+                address: {
+                    label: 'Adres',
+                    value: 'Rruga Ilindenska Nr. 25, 1000 Üsküp, Makedonya'
+                },
+                workingHours: {
+                    label: 'Çalışma Saatleri',
+                    value: 'Pazartesi - Cuma: 08:00 - 20:00, Cumartesi: 09:00 - 18:00, Pazar: 10:00 - 16:00'
+                },
+                phone: {
+                    label: 'Telefon',
+                    value: '+389 71 294 914'
+                },
+                email: {
+                    label: 'E-posta',
+                    value: 'info@xcarrental.com, rezervime@xcarrental.com'
+                }
+            },
+            actions: {
+                directions: 'Yol Tarifi Al',
+                call: 'Ara'
+            }
         },
 
         // Footer
         footer: {
-            description: 'Makedonya\'da en güvenilir araç kiralama şirketi. Makul fiyatlarla olağanüstü deneyim sunuyoruz.',
+            companyName: 'X CAR RENTAL',
+            description: 'Makedonya\'da en güvenilir araç kiralama şirketi',
             quickLinks: 'Hızlı Bağlantılar',
             services: 'Hizmetler',
             contact: 'İletişim',
@@ -299,7 +488,16 @@ const TRANSLATIONS = {
             serviceSupport: '7/24 destek',
             // Contact
             phone: '+389 71 294 914',
-            email: 'info@xcarrental.com'
+            email: 'info@xcarrental.com',
+            // Quick Links
+            home: 'Ana Sayfa',
+            cars: 'Araçlar',
+            about: 'Hakkımızda',
+            features: 'Hizmetler',
+            location: 'Konum',
+            pricing: 'Fiyatlar',
+            terms: 'Şartlar ve Koşullar',
+            faq: 'SSS'
         }
     },
 
@@ -369,9 +567,10 @@ const TRANSLATIONS = {
 
         // About Us Section
         about: {
-            title: 'За Нас',
+            title: 'Нашата Приказна',
             subtitle: 'Најсигурната компанија за изнајмување на автомобили во Македонија',
-            story: 'X Car Rental е основана со визијата да нуди најдобра услуга за изнајмување на автомобили во Македонија. Со нашето долго искуство и модерна флота, нудиме најдобро искуство за изнајмување на автомобили.',
+            story: 'X Car Rental е најсигурната компанија за изнајмување на автомобили во Македонија. Со нашето долго искуство и модерна флота, нудиме најдобро искуство за изнајмување на автомобили.',
+            story2: 'Од 2019 година, имаме сервирано повеќе од 1000 задоволни клиенти и изградивме силна репутација за квалитет, сигурност и одличен сервис.',
             stats: {
                 experience: '+ Години Искуство',
                 clients: '+ Задоволни Клиенти',
@@ -379,46 +578,135 @@ const TRANSLATIONS = {
                 support: '/7 Поддршка'
             },
             timeline: {
-                year2019: 'Почеток на Патувањето',
-                year2024: 'Лидер на Пазарот'
+                title: 'Нашиот Пат до Успехот',
+                year2019: {
+                    year: '2019',
+                    title: 'Почеток на Патот',
+                    desc: 'X Car Rental е основана со визијата да нуди најдобра услуга за изнајмување на автомобили во Македонија.'
+                },
+                year2021: {
+                    year: '2021',
+                    title: 'Раст на Флотата',
+                    desc: 'Нашата флота е проширена со нови автомобили и напредна технологија за подобрување на клиентското искуство.'
+                },
+                year2023: {
+                    year: '2023',
+                    title: 'Проширување на Услугите',
+                    desc: 'Започнавме да нудиме нови услуги како аеродромски трансфер и долгорочно изнајмување за бизниси.'
+                },
+                year2024: {
+                    year: '2024',
+                    title: 'Лидер на Пазарот',
+                    desc: 'Станавме најсигурната и најпреферирана компанија за изнајмување на автомобили во Македонија со повеќе од 1000 задоволни клиенти.'
+                }
             },
             values: {
-                quality: {
-                    title: 'Квалитет',
-                    desc: 'Нудиме услуги на највисоки стандарди'
+                title: 'Нашите Основни Вредности',
+                security: {
+                    title: 'Сигурност',
+                    clickText: 'Кликнете за повеќе',
+                    details: [
+                        'Целосно осигурани автомобили',
+                        'Редовни технички проверки',
+                        'Максимална сигурност за клиентите',
+                        'Подобрени процедури за сигурност'
+                    ]
                 },
                 reliability: {
                     title: 'Сигурност',
-                    desc: 'Нашите клиенти можат да ни веруваат'
+                    clickText: 'Кликнете за повеќе',
+                    details: [
+                        '5+ години искуство на пазарот',
+                        '1000+ задоволни клиенти',
+                        'Конзистентен и сигурен сервис',
+                        'Одговорност за секој детал'
+                    ]
                 },
-                innovation: {
-                    title: 'Иновација',
-                    desc: 'Континуирано подобрување и иновација'
+                transparency: {
+                    title: 'Транспарентност',
+                    clickText: 'Кликнете за повеќе',
+                    details: [
+                        'Јасни цени без скриени трошоци',
+                        'Детални договори',
+                        'Целосно информирање за клиентите',
+                        'Отворена и чесна комуникација'
+                    ]
+                },
+                quality: {
+                    title: 'Квалитет',
+                    clickText: 'Кликнете за повеќе',
+                    details: [
+                        'Нови и одржувани автомобили',
+                        '5-ѕвезден сервис за клиентите',
+                        'Модерна и напредна технологија',
+                        'Исклучително искуство'
+                    ]
                 }
             },
             mission: {
                 title: 'Нашата Мисија',
-                desc: 'Да нудиме најдобро искуство за изнајмување на автомобили во Македонија, комбинирајќи ја модерната технологија со персоналната услуга и најконкурентните цени на пазарот.'
+                desc: 'Да нудиме најдобро искуство за изнајмување на автомобили во Македонија, комбинирајќи ја модерната технологија со персоналната услуга и најконкурентните цени на пазарот.',
+                expand: 'Се заложивме да ги подобруваме нашите услуги постојано, да ја прошириме флотата и да нудиме одлична поддршка за секој клиент.'
             },
             vision: {
                 title: 'Нашата Визија',
-                desc: 'Да бидеме лидери во секторот за изнајмување на автомобили во Македонија и да поставиме стандарди за задоволство на клиентите.'
+                desc: 'Да бидеме најпознатата и најсигурната компанија за изнајмување на автомобили во регионот, проширувајќи се на нови пазари и одржувајќи ги високите стандарди за квалитет.',
+                expand: 'Целиме да создадеме широка мрежа на услуги што ќе ги задоволат потребите на сите видови клиенти, од индивидуални туристи до големи корпорации.'
+            },
+            whyChoose: {
+                title: 'Зошто да Не Изберете?',
+                provenExperience: {
+                    title: 'Докажано Искуство',
+                    desc: '5+ години искуство на пазарот со длабоко познавање на потребите на клиентите.'
+                },
+                regularMaintenance: {
+                    title: 'Редовно Одржување',
+                    desc: 'Сите наши автомобили поминуваат редовни технички проверки за максимална сигурност.'
+                },
+                support247: {
+                    title: '24/7 Поддршка',
+                    desc: 'Нашиот тим е секогаш достапен за да ви помогне со секое прашање или проблем.'
+                },
+                competitivePrices: {
+                    title: 'Конкурентни Цени',
+                    desc: 'Нудиме најдобри цени на пазарот со максимална флексибилност за нашите клиенти.'
+                }
             }
         },
 
         // Location Section
         location: {
             title: 'Нашата Локација',
-            subtitle: 'Посетете нè или ставете се во контакт',
-            address: 'Руга Илинденска бр. 25, 1000 Скопје, Македонија',
-            phone: 'Телефон',
-            directions: 'Земи Упатства',
-            call: 'Телефонирај'
+            subtitle: 'Посетете нè во нашата канцеларија за детални информации и договори',
+            office: {
+                title: 'X Car Rental - Главна Канцеларија',
+                address: {
+                    label: 'Адреса',
+                    value: 'Руга Илинденска бр. 25, 1000 Скопје, Македонија'
+                },
+                workingHours: {
+                    label: 'Работно Време',
+                    value: 'Понеделник - Петок: 08:00 - 20:00, Сабота: 09:00 - 18:00, Недела: 10:00 - 16:00'
+                },
+                phone: {
+                    label: 'Телефон',
+                    value: '+389 71 294 914'
+                },
+                email: {
+                    label: 'Е-пошта',
+                    value: 'info@xcarrental.com, rezervime@xcarrental.com'
+                }
+            },
+            actions: {
+                directions: 'Земи Упатства',
+                call: 'Телефонирај'
+            }
         },
 
         // Footer
         footer: {
-            description: 'Најсигурната компанија за изнајмување на автомобили во Македонија. Нудиме исклучително искуство по разумни цени.',
+            companyName: 'X CAR RENTAL',
+            description: 'Најсигурната компанија за изнајмување на автомобили во Македонија',
             quickLinks: 'Брзи Врски',
             services: 'Услуги',
             contact: 'Контакт',
@@ -445,7 +733,16 @@ const TRANSLATIONS = {
             serviceSupport: '24/7 поддршка',
             // Contact
             phone: '+389 71 294 914',
-            email: 'info@xcarrental.com'
+            email: 'info@xcarrental.com',
+            // Quick Links
+            home: 'Почетна',
+            cars: 'Автомобили',
+            about: 'За Нас',
+            features: 'Услуги',
+            location: 'Локација',
+            pricing: 'Цени',
+            terms: 'Услови и Одредби',
+            faq: 'ЧПП'
         }
     },
 
@@ -515,9 +812,10 @@ const TRANSLATIONS = {
 
         // About Us Section
         about: {
-            title: 'About Us',
+            title: 'Our Story',
             subtitle: 'The most reliable car rental company in Macedonia',
-            story: 'X Car Rental was founded with the vision of offering the best car rental service in Macedonia. With our long experience and modern fleet, we offer the best car rental experience.',
+            story: 'X Car Rental is the most reliable car rental company in Macedonia. With our long experience and modern fleet, we offer the best car rental experience.',
+            story2: 'Since 2019, we have served more than 1000 satisfied clients and built a strong reputation for quality, reliability and excellent service.',
             stats: {
                 experience: '+ Years Experience',
                 clients: '+ Satisfied Clients',
@@ -525,46 +823,135 @@ const TRANSLATIONS = {
                 support: '/7 Support'
             },
             timeline: {
-                year2019: 'Journey Begins',
-                year2024: 'Market Leader'
+                title: 'Our Path to Success',
+                year2019: {
+                    year: '2019',
+                    title: 'Journey Begins',
+                    desc: 'X Car Rental was founded with the vision of offering the best car rental service in Macedonia.'
+                },
+                year2021: {
+                    year: '2021',
+                    title: 'Fleet Growth',
+                    desc: 'Our fleet was expanded with new cars and advanced technology to improve customer experience.'
+                },
+                year2023: {
+                    year: '2023',
+                    title: 'Service Expansion',
+                    desc: 'We started offering new services such as airport transfer and long-term rental for businesses.'
+                },
+                year2024: {
+                    year: '2024',
+                    title: 'Market Leader',
+                    desc: 'We became the most reliable and preferred car rental company in Macedonia with over 1000 satisfied clients.'
+                }
             },
             values: {
-                quality: {
-                    title: 'Quality',
-                    desc: 'We offer services at the highest standards'
+                title: 'Our Core Values',
+                security: {
+                    title: 'Security',
+                    clickText: 'Click for more',
+                    details: [
+                        'Fully insured vehicles',
+                        'Regular technical inspections',
+                        'Maximum security for clients',
+                        'Improved security procedures'
+                    ]
                 },
                 reliability: {
                     title: 'Reliability',
-                    desc: 'Our customers can trust us'
+                    clickText: 'Click for more',
+                    details: [
+                        '5+ years experience in the market',
+                        '1000+ satisfied clients',
+                        'Consistent and reliable service',
+                        'Responsibility for every detail'
+                    ]
                 },
-                innovation: {
-                    title: 'Innovation',
-                    desc: 'Continuous improvement and innovation'
+                transparency: {
+                    title: 'Transparency',
+                    clickText: 'Click for more',
+                    details: [
+                        'Clear prices without hidden fees',
+                        'Detailed contracts',
+                        'Complete information for clients',
+                        'Open and honest communication'
+                    ]
+                },
+                quality: {
+                    title: 'Quality',
+                    clickText: 'Click for more',
+                    details: [
+                        'New and maintained vehicles',
+                        '5-star service for clients',
+                        'Modern and advanced technology',
+                        'Exceptional experience'
+                    ]
                 }
             },
             mission: {
                 title: 'Our Mission',
-                desc: 'To offer the best car rental experience in Macedonia, combining modern technology with personal service and the most competitive prices in the market.'
+                desc: 'To offer the best car rental experience in Macedonia, combining modern technology with personal service and the most competitive prices in the market.',
+                expand: 'We have committed to continuously improve our services, expand the fleet and provide excellent support for every client.'
             },
             vision: {
                 title: 'Our Vision',
-                desc: 'To be leaders in the car rental sector in Macedonia and set standards for customer satisfaction.'
+                desc: 'To become the most known and reliable car rental company in the region, expanding to new markets and maintaining high quality standards.',
+                expand: 'We aim to create a wide network of services that will meet the needs of all types of clients, from individual tourists to large corporations.'
+            },
+            whyChoose: {
+                title: 'Why Choose Us?',
+                provenExperience: {
+                    title: 'Proven Experience',
+                    desc: '5+ years experience in the market with deep knowledge of client needs.'
+                },
+                regularMaintenance: {
+                    title: 'Regular Maintenance',
+                    desc: 'All our vehicles undergo regular technical inspections for maximum security.'
+                },
+                support247: {
+                    title: '24/7 Support',
+                    desc: 'Our team is always available to help you with any question or problem.'
+                },
+                competitivePrices: {
+                    title: 'Competitive Prices',
+                    desc: 'We offer the best prices in the market with maximum flexibility for our clients.'
+                }
             }
         },
 
         // Location Section
         location: {
             title: 'Our Location',
-            subtitle: 'Visit us or get in touch',
-            address: 'Rruga Ilindenska Nr. 25, 1000 Skopje, Macedonia',
-            phone: 'Phone',
-            directions: 'Get Directions',
-            call: 'Call'
+            subtitle: 'Visit us at our office for detailed information and contracts',
+            office: {
+                title: 'X Car Rental - Main Office',
+                address: {
+                    label: 'Address',
+                    value: 'Rruga Ilindenska Nr. 25, 1000 Skopje, Macedonia'
+                },
+                workingHours: {
+                    label: 'Working Hours',
+                    value: 'Monday - Friday: 08:00 - 20:00, Saturday: 09:00 - 18:00, Sunday: 10:00 - 16:00'
+                },
+                phone: {
+                    label: 'Phone',
+                    value: '+389 71 294 914'
+                },
+                email: {
+                    label: 'Email',
+                    value: 'info@xcarrental.com, reservations@xcarrental.com'
+                }
+            },
+            actions: {
+                directions: 'Get Directions',
+                call: 'Call'
+            }
         },
 
         // Footer
         footer: {
-            description: 'The most reliable car rental company in Macedonia. We offer exceptional experience at reasonable prices.',
+            companyName: 'X CAR RENTAL',
+            description: 'The most reliable car rental company in Macedonia',
             quickLinks: 'Quick Links',
             services: 'Services',
             contact: 'Contact',
@@ -591,7 +978,16 @@ const TRANSLATIONS = {
             serviceSupport: '24/7 support',
             // Contact
             phone: '+389 71 294 914',
-            email: 'info@xcarrental.com'
+            email: 'info@xcarrental.com',
+            // Quick Links
+            home: 'Home',
+            cars: 'Cars',
+            about: 'About Us',
+            features: 'Services',
+            location: 'Location',
+            pricing: 'Pricing',
+            terms: 'Terms & Conditions',
+            faq: 'FAQ'
         }
     }
 };
@@ -667,16 +1063,15 @@ function updatePageContent(lang) {
         
         // About Us Section
         updateElementText('about-title', texts.about.title);
-        updateElementText('about-subtitle', texts.about.subtitle);
-        updateElementText('about-story', texts.about.story);
+        updateElementText('split-text-1', texts.about.story);
+        updateElementText('split-text-2', texts.about.story2);
         
         // Location Section
         updateElementText('location-title', texts.location.title);
         updateElementText('location-subtitle', texts.location.subtitle);
-        updateElementText('location-address', texts.location.address);
         
         // Footer
-        updateElementText('footer-description', texts.footer.description);
+        updateElementText('footer-company-desc', texts.footer.description);
         updateElementText('footer-quick-links', texts.footer.quickLinks);
         updateElementText('footer-services', texts.footer.services);
         updateElementText('footer-contact', texts.footer.contact);
@@ -705,6 +1100,9 @@ function updatePageContent(lang) {
         updateElementText('footer-phone', texts.footer.phone);
         updateElementText('footer-email', texts.footer.email);
         
+        // Update all elements with data-translate attributes
+        updateAllTranslatableElements(texts);
+        
         // Fade in content
         fadeInContent();
         
@@ -718,6 +1116,31 @@ function updateElementText(elementId, text) {
     if (element) {
         element.textContent = text;
     }
+}
+
+// Function to update all elements with data-translate attributes
+function updateAllTranslatableElements(texts) {
+    const translatableElements = document.querySelectorAll('[data-translate]');
+    
+    translatableElements.forEach(element => {
+        const translationKey = element.getAttribute('data-translate');
+        const translatedText = getNestedTranslation(texts, translationKey);
+        
+        if (translatedText) {
+            if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                element.placeholder = translatedText;
+            } else {
+                element.textContent = translatedText;
+            }
+        }
+    });
+}
+
+// Helper function to get nested translation values
+function getNestedTranslation(obj, path) {
+    return path.split('.').reduce((current, key) => {
+        return current && current[key] !== undefined ? current[key] : null;
+    }, obj);
 }
 
 // Fade effects for smooth language transitions

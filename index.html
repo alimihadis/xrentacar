@@ -23,11 +23,11 @@
                 <img src="assets/logo.jpg" alt="X Car Rental Logo" class="logo-image">
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" id="nav-home">Ballina</a></li>
-                <li><a href="#cars" id="nav-cars">Makinat</a></li>
-                <li><a href="#about" id="nav-about">Rreth Nesh</a></li>
-                <li><a href="#features" id="nav-features">Shërbimet</a></li>
-                <li><a href="#location" id="nav-location">Lokacioni</a></li>
+                <li><a href="#home" id="nav-home" data-translate="nav.home">Ballina</a></li>
+                <li><a href="#cars" id="nav-cars" data-translate="nav.cars">Makinat</a></li>
+                <li><a href="#about" id="nav-about" data-translate="nav.about">Rreth Nesh</a></li>
+                <li><a href="#features" id="nav-features" data-translate="nav.features">Shërbimet</a></li>
+                <li><a href="#location" id="nav-location" data-translate="nav.location">Lokacioni</a></li>
             </ul>
             <div class="language-switcher">
                 <button class="lang-dropdown-btn" id="lang-dropdown-btn">
@@ -71,12 +71,12 @@
                 <i class="fas fa-times"></i>
             </button>
             <ul>
-                <li><a href="#home" id="nav-home-mobile">Ballina</a></li>
-                <li><a href="#cars" id="nav-cars-mobile">Makinat</a></li>
-                <li><a href="#about" id="nav-about-mobile">Rreth Nesh</a></li>
-                <li><a href="#features" id="nav-features-mobile">Shërbimet</a></li>
-                <li><a href="#location" id="nav-location-mobile">Lokacioni</a></li>
-                <li><a href="#contact" id="nav-contact-mobile">Kontakt</a></li>
+                <li><a href="#home" id="nav-home-mobile" data-translate="nav.home">Ballina</a></li>
+                <li><a href="#cars" id="nav-cars-mobile" data-translate="nav.cars">Makinat</a></li>
+                <li><a href="#about" id="nav-about-mobile" data-translate="nav.about">Rreth Nesh</a></li>
+                <li><a href="#features" id="nav-features-mobile" data-translate="nav.features">Shërbimet</a></li>
+                <li><a href="#location" id="nav-location-mobile" data-translate="nav.location">Lokacioni</a></li>
+                <li><a href="#contact" id="nav-contact-mobile" data-translate="nav.contact">Kontakt</a></li>
             </ul>
             <div class="mobile-language-switcher">
                 <div class="mobile-lang-options">
@@ -104,11 +104,11 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 id="hero-title">Makina me Qira në Maqedoni</h1>
-            <p id="hero-subtitle">Eksperiencë e jashtëzakonshme me makina moderne, çmime të arsyeshme dhe shërbim 24/7</p>
+            <h1 id="hero-title" data-translate="hero.title">Makina me Qira në Maqedoni</h1>
+            <p id="hero-subtitle" data-translate="hero.subtitle">Eksperiencë e jashtëzakonshme me makina moderne, çmime të arsyeshme dhe shërbim 24/7</p>
             <a href="#cars" class="cta-button">
                 <i class="fas fa-car"></i>
-                <span id="hero-cta">Shiko Makinat</span>
+                <span id="hero-cta" data-translate="hero.cta">Shiko Makinat</span>
             </a>
         </div>
     </section>
@@ -118,16 +118,16 @@
     <section id="cars" class="cars-section fade-in">
         <div class="container">
             <div class="section-title">
-                <h2 id="cars-title">Makinat Tona</h2>
-                <p id="cars-subtitle">Zgjidhni nga koleksioni ynë i makinave premium</p>
+                <h2 id="cars-title" data-translate="cars.title">Makinat Tona</h2>
+                <p id="cars-subtitle" data-translate="cars.subtitle">Zgjidhni nga koleksioni ynë i makinave premium</p>
             </div>
             
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all" id="filter-all">Të Gjitha</button>
-                <button class="filter-btn" data-filter="ekonomike" id="filter-economy">Ekonomike</button>
-                <button class="filter-btn" data-filter="luksoze" id="filter-luxury">Luksoze</button>
-                <button class="filter-btn" data-filter="suv" id="filter-suv">SUV</button>
-                <button class="filter-btn" data-filter="familjare" id="filter-family">Familjare</button>
+                <button class="filter-btn active" data-filter="all" id="filter-all" data-translate="cars.filters.all">Të Gjitha</button>
+                <button class="filter-btn" data-filter="ekonomike" id="filter-economy" data-translate="cars.filters.economy">Ekonomike</button>
+                <button class="filter-btn" data-filter="luksoze" id="filter-luxury" data-translate="cars.filters.luxury">Luksoze</button>
+                <button class="filter-btn" data-filter="suv" id="filter-suv" data-translate="cars.filters.suv">SUV</button>
+                <button class="filter-btn" data-filter="familjare" id="filter-family" data-translate="cars.filters.family">Familjare</button>
             </div>
 
             <div class="cars-grid" id="cars-container">
@@ -140,8 +140,8 @@
     <section id="features" class="features-section fade-in">
         <div class="container">
             <div class="section-title">
-                <h2 id="features-title">Shërbimet Tona</h2>
-                <p id="features-subtitle">Ofrojmë shërbime të plota dhe fleksibël për të gjitha nevojat tuaja</p>
+                <h2 id="features-title" data-translate="features.title">Shërbimet Tona</h2>
+                <p id="features-subtitle" data-translate="features.subtitle">Ofrojmë shërbime të plota dhe fleksibël për të gjitha nevojat tuaja</p>
             </div>
             
             <div class="features-grid">
@@ -149,48 +149,48 @@
                     <div class="feature-icon">
                         <i class="fas fa-car"></i>
                     </div>
-                    <h3>Qira Afatshkurtër</h3>
-                    <p>Qira ditore, javore dhe mujore me fleksibilitet maksimal për udhëtimet tuaja.</p>
+                    <h3 data-translate="features.services.shortTerm.title">Qira Afatshkurtër</h3>
+                    <p data-translate="features.services.shortTerm.desc">Qira ditore, javore dhe mujore me fleksibilitet maksimal për udhëtimet tuaja.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <h3>Transfer Aeroporti</h3>
-                    <p>Shërbim i shpejtë dhe i besueshëm për transfer nga dhe në aeroportin e Prishtinës.</p>
+                    <h3 data-translate="features.services.airportTransfer.title">Transfer Aeroporti</h3>
+                    <p data-translate="features.services.airportTransfer.desc">Shërbim i shpejtë dhe i besueshëm për transfer nga dhe në aeroportin e Prishtinës.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3>Qira Afatgjatë</h3>
-                    <p>Zgjidhje ekonomike për bizneset dhe klientët që kanë nevojë për makina për periudha të gjata.</p>
+                    <h3 data-translate="features.services.longTerm.title">Qira Afatgjatë</h3>
+                    <p data-translate="features.services.longTerm.desc">Zgjidhje ekonomike për bizneset dhe klientët që kanë nevojë për makina për periudha të gjata.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Sigurim i Plotë</h3>
-                    <p>Të gjitha makinat tona janë të siguruara plotësisht për sigurinë maksimale të klientëve.</p>
+                    <h3 data-translate="features.services.fullInsurance.title">Sigurim i Plotë</h3>
+                    <p data-translate="features.services.fullInsurance.desc">Të gjitha makinat tona janë të siguruara plotësisht për sigurinë maksimale të klientëve.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Mirëmbajtje e Rregullt</h3>
-                    <p>Kontroll teknike të rregullta dhe mirëmbajtje për të siguruar cilësinë e makinave.</p>
+                    <h3 data-translate="features.services.maintenance.title">Mirëmbajtje e Rregullt</h3>
+                    <p data-translate="features.services.maintenance.desc">Kontroll teknike të rregullta dhe mirëmbajtje për të siguruar cilësinë e makinave.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Mbështetje 24/7</h3>
-                    <p>Ekipi ynë është gjithmonë i disponueshëm për të ju ndihmuar me çdo pyetje ose problem.</p>
+                    <h3 data-translate="features.services.support.title">Mbështetje 24/7</h3>
+                    <p data-translate="features.services.support.desc">Ekipi ynë është gjithmonë i disponueshëm për të ju ndihmuar me çdo pyetje ose problem.</p>
                 </div>
             </div>
         </div>
@@ -211,11 +211,11 @@
             <!-- Hero Text with Typewriter Animation -->
             <div class="about-hero">
                 <div class="typewriter-container">
-                    <h2 class="typewriter-heading" id="about-title">Rrëfimi Ynë</h2>
+                    <h2 class="typewriter-heading" id="about-title" data-translate="about.title">Rrëfimi Ynë</h2>
                 </div>
                 <div class="split-text-container">
-                    <p class="split-text" id="split-text-1">X Car Rental është kompania më e besueshme për qira makinash në Maqedoni. Me eksperiencën tonë të gjatë dhe flotën moderne, ofrojmë eksperiencën më të mirë të qirasë së makinave.</p>
-                    <p class="split-text" id="split-text-2">Që nga viti 2019, kemi shërbyer më shumë se 1000 klientë të kënaqur dhe kemi ndërtuar një reputacion të fortë për cilësi, besueshmëri dhe shërbim të shkëlqyeshëm.</p>
+                    <p class="split-text" id="split-text-1" data-translate="about.story">X Car Rental është kompania më e besueshme për qira makinash në Maqedoni. Me eksperiencën tonë të gjatë dhe flotën moderne, ofrojmë eksperiencën më të mirë të qirasë së makinave.</p>
+                    <p class="split-text" id="split-text-2" data-translate="about.story2">Që nga viti 2019, kemi shërbyer më shumë se 1000 klientë të kënaqur dhe kemi ndërtuar një reputacion të fortë për cilësi, besueshmëri dhe shërbim të shkëlqyeshëm.</p>
                 </div>
             </div>
 
@@ -227,7 +227,7 @@
                             <i class="fas fa-calendar-alt"></i>
                         </div>
                         <div class="stat-number" id="stat-1">0</div>
-                        <div class="stat-label">+ Vite Eksperiencë</div>
+                        <div class="stat-label" data-translate="about.stats.experience">+ Vite Eksperiencë</div>
                         <div class="progress-bar">
                             <div class="progress-fill"></div>
                         </div>
@@ -238,7 +238,7 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="stat-number" id="stat-2">0</div>
-                        <div class="stat-label">+ Klientë të Kënaqur</div>
+                        <div class="stat-label" data-translate="about.stats.clients">+ Klientë të Kënaqur</div>
                         <div class="progress-bar">
                             <div class="progress-fill"></div>
                         </div>
@@ -249,7 +249,7 @@
                             <i class="fas fa-car"></i>
                         </div>
                         <div class="stat-number" id="stat-3">0</div>
-                        <div class="stat-label">+ Makina Premium</div>
+                        <div class="stat-label" data-translate="about.stats.cars">+ Makina Premium</div>
                         <div class="progress-bar">
                             <div class="progress-fill"></div>
                         </div>
@@ -260,7 +260,7 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div class="stat-number" id="stat-4">0</div>
-                        <div class="stat-label">/7 Mbështetje</div>
+                        <div class="stat-label" data-translate="about.stats.support">/7 Mbështetje</div>
                         <div class="progress-bar">
                             <div class="progress-fill"></div>
                         </div>
@@ -270,7 +270,7 @@
 
             <!-- Company Timeline Section -->
             <div class="timeline-section">
-                <h3 class="section-subtitle">Rruga Jonë e Suksesit</h3>
+                <h3 class="section-subtitle" data-translate="about.timeline.title">Rruga Jonë e Suksesit</h3>
                 <div class="timeline">
                     <div class="timeline-line"></div>
                     
@@ -278,8 +278,8 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-year">2019</div>
-                            <h4>Fillimi i Rrugës</h4>
-                            <p>X Car Rental u themelua me vizionin për të ofruar shërbimin më të mirë të qirasë së makinave në Maqedoni.</p>
+                            <h4 data-translate="about.timeline.year2019.title">Fillimi i Rrugës</h4>
+                            <p data-translate="about.timeline.year2019.desc">X Car Rental u themelua me vizionin për të ofruar shërbimin më të mirë të qirasë së makinave në Maqedoni.</p>
                         </div>
                     </div>
                     
@@ -287,8 +287,8 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-year">2021</div>
-                            <h4>Rritja e Flotës</h4>
-                            <p>Flota jonë u zgjerua me makina të reja dhe teknologji të avancuar për të përmirësuar eksperiencën e klientëve.</p>
+                            <h4 data-translate="about.timeline.year2021.title">Rritja e Flotës</h4>
+                            <p data-translate="about.timeline.year2021.desc">Flota jonë u zgjerua me makina të reja dhe teknologji të avancuar për të përmirësuar eksperiencën e klientëve.</p>
                         </div>
                     </div>
                     
@@ -296,8 +296,8 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-year">2023</div>
-                            <h4>Ekspansioni i Shërbimeve</h4>
-                            <p>Filluam të ofrojmë shërbime të reja si transfer aeroporti dhe qira afatgjatë për bizneset.</p>
+                            <h4 data-translate="about.timeline.year2023.title">Ekspansioni i Shërbimeve</h4>
+                            <p data-translate="about.timeline.year2023.desc">Filluam të ofrojmë shërbime të reja si transfer aeroporti dhe qira afatgjatë për bizneset.</p>
                         </div>
                     </div>
                     
@@ -305,8 +305,8 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-year">2024</div>
-                            <h4>Lideri i Tregut</h4>
-                            <p>U bëmë kompania më e besueshme dhe e preferuar për qira makinash në Maqedoni me mbi 1000 klientë të kënaqur.</p>
+                            <h4 data-translate="about.timeline.year2024.title">Lideri i Tregut</h4>
+                            <p data-translate="about.timeline.year2024.desc">U bëmë kompania më e besueshme dhe e preferuar për qira makinash në Maqedoni me mbi 1000 klientë të kënaqur.</p>
                         </div>
                     </div>
                 </div>
@@ -314,7 +314,7 @@
 
             <!-- 3D Flip Cards for Values -->
             <div class="values-section">
-                <h3 class="section-subtitle">Vlerat Tona Themelore</h3>
+                <h3 class="section-subtitle" data-translate="about.values.title">Vlerat Tona Themelore</h3>
                 <div class="values-grid">
                     <div class="flip-card" data-card="1">
                         <div class="flip-card-inner">
@@ -322,16 +322,16 @@
                                 <div class="value-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <h4>Siguria</h4>
-                                <p>Klikoni për më shumë</p>
+                                <h4 data-translate="about.values.security.title">Siguria</h4>
+                                <p data-translate="about.values.security.clickText">Klikoni për më shumë</p>
                             </div>
                             <div class="flip-card-back">
-                                <h4>Siguria</h4>
+                                <h4 data-translate="about.values.security.title">Siguria</h4>
                                 <ul>
-                                    <li>Makina të siguruara plotësisht</li>
-                                    <li>Kontroll teknike të rregullta</li>
-                                    <li>Siguri maksimale për klientët</li>
-                                    <li>Procedura të sigurisë të përmirësuara</li>
+                                    <li data-translate="about.values.security.details.0">Makina të siguruara plotësisht</li>
+                                    <li data-translate="about.values.security.details.1">Kontroll teknike të rregullta</li>
+                                    <li data-translate="about.values.security.details.2">Siguri maksimale për klientët</li>
+                                    <li data-translate="about.values.security.details.3">Procedura të sigurisë të përmirësuara</li>
                                 </ul>
                             </div>
                         </div>
@@ -343,16 +343,16 @@
                                 <div class="value-icon">
                                     <i class="fas fa-handshake"></i>
                                 </div>
-                                <h4>Besueshmëria</h4>
-                                <p>Klikoni për më shumë</p>
+                                <h4 data-translate="about.values.reliability.title">Besueshmëria</h4>
+                                <p data-translate="about.values.reliability.clickText">Klikoni për më shumë</p>
                             </div>
                             <div class="flip-card-back">
-                                <h4>Besueshmëria</h4>
+                                <h4 data-translate="about.values.reliability.title">Besueshmëria</h4>
                                 <ul>
-                                    <li>5+ vite eksperiencë në treg</li>
-                                    <li>1000+ klientë të kënaqur</li>
-                                    <li>Shërbim konsistent dhe i besueshëm</li>
-                                    <li>Përgjegjësi për çdo detaj</li>
+                                    <li data-translate="about.values.reliability.details.0">5+ vite eksperiencë në treg</li>
+                                    <li data-translate="about.values.reliability.details.1">1000+ klientë të kënaqur</li>
+                                    <li data-translate="about.values.reliability.details.2">Shërbim konsistent dhe i besueshëm</li>
+                                    <li data-translate="about.values.reliability.details.3">Përgjegjësi për çdo detaj</li>
                                 </ul>
                             </div>
                         </div>
@@ -364,16 +364,16 @@
                                 <div class="value-icon">
                                     <i class="fas fa-eye"></i>
                                 </div>
-                                <h4>Transparenca</h4>
-                                <p>Klikoni për më shumë</p>
+                                <h4 data-translate="about.values.transparency.title">Transparenca</h4>
+                                <p data-translate="about.values.transparency.clickText">Klikoni për më shumë</p>
                             </div>
                             <div class="flip-card-back">
-                                <h4>Transparenca</h4>
+                                <h4 data-translate="about.values.transparency.title">Transparenca</h4>
                                 <ul>
-                                    <li>Çmime të qarta pa fshehura</li>
-                                    <li>Kontrata të detajuara</li>
-                                    <li>Informim i plotë për klientët</li>
-                                    <li>Komunikim i hapur dhe i ndershëm</li>
+                                    <li data-translate="about.values.transparency.details.0">Çmime të qarta pa fshehura</li>
+                                    <li data-translate="about.values.transparency.details.1">Kontrata të detajuara</li>
+                                    <li data-translate="about.values.transparency.details.2">Informim i plotë për klientët</li>
+                                    <li data-translate="about.values.transparency.details.3">Komunikim i hapur dhe i ndershëm</li>
                                 </ul>
                             </div>
                         </div>
@@ -385,16 +385,16 @@
                                 <div class="value-icon">
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <h4>Cilësia</h4>
-                                <p>Klikoni për më shumë</p>
+                                <h4 data-translate="about.values.quality.title">Cilësia</h4>
+                                <p data-translate="about.values.quality.clickText">Klikoni për më shumë</p>
                             </div>
                             <div class="flip-card-back">
-                                <h4>Cilësia</h4>
+                                <h4 data-translate="about.values.quality.title">Cilësia</h4>
                                 <ul>
-                                    <li>Makina të reja dhe të mirëmbajtura</li>
-                                    <li>Shërbim 5 yje për klientët</li>
-                                    <li>Teknologji moderne dhe e avancuar</li>
-                                    <li>Eksperiencë e jashtëzakonshme</li>
+                                    <li data-translate="about.values.quality.details.0">Makina të reja dhe të mirëmbajtura</li>
+                                    <li data-translate="about.values.quality.details.1">Shërbim 5 yje për klientët</li>
+                                    <li data-translate="about.values.quality.details.2">Teknologji moderne dhe e avancuar</li>
+                                    <li data-translate="about.values.quality.details.3">Eksperiencë e jashtëzakonshme</li>
                                 </ul>
                             </div>
                         </div>
@@ -410,12 +410,12 @@
                             <div class="card-icon">
                                 <i class="fas fa-bullseye"></i>
                             </div>
-                            <h4>Misioni Ynë</h4>
+                            <h4 data-translate="about.mission.title">Misioni Ynë</h4>
                         </div>
                         <div class="card-content">
-                            <p>Ofrojmë eksperiencën më të mirë të qirasë së makinave në Maqedoni, duke kombinuar teknologjinë moderne me shërbimin personal dhe çmimet më të konkurruese në treg.</p>
+                            <p data-translate="about.mission.desc">Ofrojmë eksperiencën më të mirë të qirasë së makinave në Maqedoni, duke kombinuar teknologjinë moderne me shërbimin personal dhe çmimet më të konkurruese në treg.</p>
                             <div class="expand-content" style="display: none;">
-                                <p>Kemi angazhuar të përmirësojmë vazhdimisht shërbimet tona, të zgjerojmë flotën dhe të ofrojmë mbështetje të shkëlqyeshme për çdo klient.</p>
+                                <p data-translate="about.mission.expand">Kemi angazhuar të përmirësojmë vazhdimisht shërbimet tona, të zgjerojmë flotën dhe të ofrojmë mbështetje të shkëlqyeshme për çdo klient.</p>
                             </div>
                          
                         </div>
@@ -426,12 +426,12 @@
                             <div class="card-icon">
                                 <i class="fas fa-eye"></i>
                             </div>
-                            <h4>Vizioni Ynë</h4>
+                            <h4 data-translate="about.vision.title">Vizioni Ynë</h4>
                         </div>
                         <div class="card-content">
-                            <p>Të bëhemi kompania më e njohur dhe e besueshme për qira makinash në rajon, duke u zgjeruar në tregjet e reja dhe duke mbajtur standardet e larta të cilësisë.</p>
+                            <p data-translate="about.vision.desc">Të bëhemi kompania më e njohur dhe e besueshme për qira makinash në rajon, duke u zgjeruar në tregjet e reja dhe duke mbajtur standardet e larta të cilësisë.</p>
                             <div class="expand-content" style="display: none;">
-                                <p>Synojmë të krijojmë një rrjet të gjerë shërbimesh që të përmbushim nevojat e të gjitha llojeve të klientëve, nga turistët individual deri te korporatat e mëdha.</p>
+                                <p data-translate="about.vision.expand">Synojmë të krijojmë një rrjet të gjerë shërbimesh që të përmbushim nevojat e të gjitha llojeve të klientëve, nga turistët individual deri te korporatat e mëdha.</p>
                             </div>
                             
                         </div>
@@ -441,38 +441,38 @@
 
             <!-- Why Choose Us Section -->
             <div class="why-choose-section">
-                <h3 class="section-subtitle">Pse të Na Zgjidhni Ne?</h3>
+                <h3 class="section-subtitle" data-translate="about.whyChoose.title">Pse të Na Zgjidhni Ne?</h3>
                 <div class="advantages-grid">
                     <div class="advantage-item">
                         <div class="advantage-icon">
                             <i class="fas fa-award"></i>
                         </div>
-                        <h4>Eksperiencë e Provuar</h4>
-                        <p>5+ vite eksperiencë në treg me njohuri të thella për nevojat e klientëve.</p>
+                        <h4 data-translate="about.whyChoose.provenExperience.title">Eksperiencë e Provuar</h4>
+                        <p data-translate="about.whyChoose.provenExperience.desc">5+ vite eksperiencë në treg me njohuri të thella për nevojat e klientëve.</p>
                     </div>
                     
                     <div class="advantage-item">
                         <div class="advantage-icon">
                             <i class="fas fa-tools"></i>
                         </div>
-                        <h4>Mirëmbajtje e Rregullt</h4>
-                        <p>Të gjitha makinat tona kalojnë kontroll teknike të rregullta për sigurinë maksimale.</p>
+                        <h4 data-translate="about.whyChoose.regularMaintenance.title">Mirëmbajtje e Rregullt</h4>
+                        <p data-translate="about.whyChoose.regularMaintenance.desc">Të gjitha makinat tona kalojnë kontroll teknike të rregullta për sigurinë maksimale.</p>
                     </div>
                     
                     <div class="advantage-item">
                         <div class="advantage-icon">
                             <i class="fas fa-headset"></i>
                         </div>
-                        <h4>Mbështetje 24/7</h4>
-                        <p>Ekipi ynë është gjithmonë i disponueshëm për të ju ndihmuar me çdo pyetje ose problem.</p>
+                        <h4 data-translate="about.whyChoose.support247.title">Mbështetje 24/7</h4>
+                        <p data-translate="about.whyChoose.support247.desc">Ekipi ynë është gjithmonë i disponueshëm për të ju ndihmuar me çdo pyetje ose problem.</p>
                     </div>
                     
                     <div class="advantage-item">
                         <div class="advantage-icon">
                             <i class="fas fa-euro-sign"></i>
                         </div>
-                        <h4>Çmime Konkurruese</h4>
-                        <p>Ofrojmë çmimet më të mira në treg me fleksibilitet maksimal për klientët tanë.</p>
+                        <h4 data-translate="about.whyChoose.competitivePrices.title">Çmime Konkurruese</h4>
+                        <p data-translate="about.whyChoose.competitivePrices.desc">Ofrojmë çmimet më të mira në treg me fleksibilitet maksimal për klientët tanë.</p>
                     </div>
                 </div>
             </div>
@@ -483,8 +483,8 @@
     <section id="location" class="location-section fade-in">
         <div class="container">
             <div class="section-title">
-                <h2 id="location-title">Lokacioni Ynë</h2>
-                <p id="location-subtitle">Na vizitoni në zyrën tonë për informata të detajuara dhe kontrata</p>
+                <h2 id="location-title" data-translate="location.title">Lokacioni Ynë</h2>
+                <p id="location-subtitle" data-translate="location.subtitle">Na vizitoni në zyrën tonë për informata të detajuara dhe kontrata</p>
             </div>
             <div class="location-content">
                 <div class="location-info">
@@ -492,45 +492,45 @@
                         <div class="office-icon">
                             <i class="fas fa-building"></i>
                         </div>
-                        <h3>X Car Rental - Zyra Kryesore</h3>
+                        <h3 data-translate="location.office.title">X Car Rental - Zyra Kryesore</h3>
                         <div class="office-details">
                             <div class="detail-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <h4>Adresa</h4>
-                                    <p>Rruga Ilindenska Nr. 25<br>1000 Shkup, Maqedoni</p>
+                                    <h4 data-translate="location.office.address.label">Adresa</h4>
+                                    <p data-translate="location.office.address.value">Rruga Ilindenska Nr. 25<br>1000 Shkup, Maqedoni</p>
                                 </div>
                             </div>
                             <div class="detail-item">
                                 <i class="fas fa-clock"></i>
                                 <div>
-                                    <h4>Orari i Punës</h4>
-                                    <p>E Hënë - E Premte: 08:00 - 20:00<br>E Shtunë: 09:00 - 18:00<br>E Dielë: 10:00 - 16:00</p>
+                                    <h4 data-translate="location.office.workingHours.label">Orari i Punës</h4>
+                                    <p data-translate="location.office.workingHours.value">E Hënë - E Premte: 08:00 - 20:00<br>E Shtunë: 09:00 - 18:00<br>E Dielë: 10:00 - 16:00</p>
                                 </div>
                             </div>
                             <div class="detail-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
-                                    <h4>Telefoni</h4>
-                                    <p>+389 71 294 914</p>
+                                    <h4 data-translate="location.office.phone.label">Telefoni</h4>
+                                    <p data-translate="location.office.phone.value">+389 71 294 914</p>
                                 </div>
                             </div>
                             <div class="detail-item">
                                 <i class="fas fa-envelope"></i>
                                 <div>
-                                    <h4>Email</h4>
-                                    <p>info@xcarrental.com<br>rezervime@xcarrental.com</p>
+                                    <h4 data-translate="location.office.email.label">Email</h4>
+                                    <p data-translate="location.office.email.value">info@xcarrental.com<br>rezervime@xcarrental.com</p>
                                 </div>
                             </div>
                         </div>
                         <div class="office-actions">
                             <a href="https://maps.google.com/?q=42.6629138,21.1655028" class="directions-btn" target="_blank">
                                 <i class="fas fa-directions"></i>
-                                Merrni Udhëzimet
+                                <span data-translate="location.actions.directions">Merrni Udhëzimet</span>
                             </a>
                             <a href="tel:+38971294914" class="call-btn">
                                 <i class="fas fa-phone"></i>
-                                Telefononi
+                                <span data-translate="location.actions.call">Telefononi</span>
                             </a>
                         </div>
                     </div>
@@ -571,96 +571,96 @@
                     <div class="footer-column company-column">
                         <div class="company-logo">
                             <img src="assets/logo.jpg" alt="X Car Rental Logo" class="footer-logo">
-                            <h3 class="company-name">X CAR RENTAL</h3>
+                            <h3 class="company-name" data-translate="footer.companyName">X CAR RENTAL</h3>
                         </div>
-                        <p class="company-description" id="footer-company-desc">
+                        <p class="company-description" id="footer-company-desc" data-translate="footer.description">
                             Kompania më e besueshme për qira makinash në Maqedoni
                         </p>
                         <div class="company-stats">
                             <div class="stat-item">
                                 <i class="fas fa-clock"></i>
-                                <span id="footer-experience">5+ vite eksperiencë</span>
+                                <span id="footer-experience" data-translate="footer.experience">5+ vite eksperiencë</span>
                             </div>
                             <div class="stat-item">
                                 <i class="fas fa-users"></i>
-                                <span id="footer-clients">1000+ klientë të kënaqur</span>
+                                <span id="footer-clients" data-translate="footer.clients">1000+ klientë të kënaqur</span>
                             </div>
                         </div>
                         <div class="company-address">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span id="footer-address">Rruga Ilindenska Nr. 25, 1000 Shkup, Maqedoni</span>
+                            <span id="footer-address" data-translate="footer.address">Rruga Ilindenska Nr. 25, 1000 Shkup, Maqedoni</span>
                         </div>
                     </div>
 
                     <!-- Column 2: Quick Links -->
                     <div class="footer-column">
-                        <h4 class="footer-title" id="footer-quick-links">Lidhje të Shpejta</h4>
+                        <h4 class="footer-title" id="footer-quick-links" data-translate="footer.quickLinks">Lidhje të Shpejta</h4>
                         <ul class="footer-links">
-                            <li><a href="#home" class="footer-link"><i class="fas fa-home"></i>Ballina</a></li>
-                            <li><a href="#cars" class="footer-link"><i class="fas fa-car"></i>Makinat</a></li>
-                            <li><a href="#about" class="footer-link"><i class="fas fa-info-circle"></i>Rreth Nesh</a></li>
-                            <li><a href="#features" class="footer-link"><i class="fas fa-cogs"></i>Shërbimet</a></li>
-                            <li><a href="#location" class="footer-link"><i class="fas fa-map-marker-alt"></i>Lokacioni</a></li>
-                            <li><a href="#pricing" class="footer-link"><i class="fas fa-tags"></i>Çmimet</a></li>
-                            <li><a href="#terms" class="footer-link"><i class="fas fa-file-contract"></i>Termat dhe Kushtet</a></li>
-                            <li><a href="#faq" class="footer-link"><i class="fas fa-question-circle"></i>FAQ</a></li>
+                            <li><a href="#home" class="footer-link"><i class="fas fa-home"></i><span data-translate="footer.home">Ballina</span></a></li>
+                            <li><a href="#cars" class="footer-link"><i class="fas fa-car"></i><span data-translate="footer.cars">Makinat</span></a></li>
+                            <li><a href="#about" class="footer-link"><i class="fas fa-info-circle"></i><span data-translate="footer.about">Rreth Nesh</span></a></li>
+                            <li><a href="#features" class="footer-link"><i class="fas fa-cogs"></i><span data-translate="footer.features">Shërbimet</span></a></li>
+                            <li><a href="#location" class="footer-link"><i class="fas fa-map-marker-alt"></i><span data-translate="footer.location">Lokacioni</span></a></li>
+                            <li><a href="#pricing" class="footer-link"><i class="fas fa-tags"></i><span data-translate="footer.pricing">Çmimet</span></a></li>
+                            <li><a href="#terms" class="footer-link"><i class="fas fa-file-contract"></i><span data-translate="footer.terms">Termat dhe Kushtet</span></a></li>
+                            <li><a href="#faq" class="footer-link"><i class="fas fa-question-circle"></i><span data-translate="footer.faq">FAQ</span></a></li>
                         </ul>
                     </div>
 
                     <!-- Column 3: Services -->
                     <div class="footer-column">
-                        <h4 class="footer-title" id="footer-services">Shërbimet</h4>
+                        <h4 class="footer-title" id="footer-services" data-translate="footer.services">Shërbimet</h4>
                         <ul class="footer-services">
                             <li class="service-item">
                                 <i class="fas fa-clock"></i>
-                                <span id="footer-service-rental">Qira afatshkurtër dhe afatgjatë</span>
+                                <span id="footer-service-rental" data-translate="footer.serviceRental">Qira afatshkurtër dhe afatgjatë</span>
                             </li>
                             <li class="service-item">
                                 <i class="fas fa-plane"></i>
-                                <span id="footer-service-airport">Transfer aeroporti 24/7</span>
+                                <span id="footer-service-airport" data-translate="footer.serviceAirport">Transfer aeroporti 24/7</span>
                             </li>
                             <li class="service-item">
                                 <i class="fas fa-building"></i>
-                                <span id="footer-service-corporate">Paketa korporative</span>
+                                <span id="footer-service-corporate" data-translate="footer.serviceCorporate">Paketa korporative</span>
                             </li>
                             <li class="service-item">
                                 <i class="fas fa-truck"></i>
-                                <span id="footer-service-delivery">Delivery falas në qytet</span>
+                                <span id="footer-service-delivery" data-translate="footer.serviceDelivery">Delivery falas në qytet</span>
                             </li>
                             <li class="service-item">
                                 <i class="fas fa-headset"></i>
-                                <span id="footer-service-support">Mbështetje gjatë gjithë kohës</span>
+                                <span id="footer-service-support" data-translate="footer.serviceSupport">Mbështetje gjatë gjithë kohës</span>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Column 4: Contact -->
                     <div class="footer-column">
-                        <h4 class="footer-title" id="footer-contact">Kontakti</h4>
+                        <h4 class="footer-title" id="footer-contact" data-translate="footer.contact">Kontakti</h4>
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
-                                <span id="footer-phone">+389 71 294 914</span>
+                                <span id="footer-phone" data-translate="footer.phone">+389 71 294 914</span>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <span id="footer-email">info@xcarrental.com</span>
+                                <span id="footer-email" data-translate="footer.email">info@xcarrental.com</span>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-clock"></i>
-                                <span id="footer-available-247">Orari: 24/7 i disponueshëm</span>
+                                <span id="footer-available-247" data-translate="footer.available247">Orari: 24/7 i disponueshëm</span>
                             </div>
                         </div>
                         
                         <!-- WhatsApp Button -->
                         <a href="https://wa.me/38971294914" class="whatsapp-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            <span id="footer-whatsapp-btn">Rezervo në WhatsApp</span>
+                            <span id="footer-whatsapp-btn" data-translate="footer.whatsappBtn">Rezervo në WhatsApp</span>
                         </a>
 
                         <!-- Social Media -->
                         <div class="social-media">
-                            <h5 id="footer-follow-us">Na ndiqni</h5>
+                            <h5 id="footer-follow-us" data-translate="footer.followUs">Na ndiqni</h5>
                             <div class="social-icons">
                                 <a href="#" class="social-icon facebook">
                                     <i class="fab fa-facebook-f"></i>
@@ -677,21 +677,21 @@
                 </div>
 
                 <!-- Newsletter Signup -->
-                <div class="newsletter-section">
+                <!-- <div class="newsletter-section">
                     <div class="newsletter-content">
-                        <h4 id="footer-newsletter-title">Bashkohuni me ne për ofertat speciale!</h4>
-                        <p id="footer-newsletter-desc">Merrni njoftime për çmimet më të mira dhe ofertat ekskluzive</p>
+                        <h4 id="footer-newsletter-title" data-translate="footer.newsletterTitle">Bashkohuni me ne për ofertat speciale!</h4>
+                        <p id="footer-newsletter-desc" data-translate="footer.newsletterDesc">Merrni njoftime për çmimet më të mira dhe ofertat ekskluzive</p>
                         <form class="newsletter-form" id="newsletter-form">
                             <div class="input-group">
-                                <input type="email" id="footer-newsletter-placeholder" placeholder="Email juaj" required>
+                                <input type="email" id="footer-newsletter-placeholder" data-translate="footer.newsletterPlaceholder" placeholder="Email juaj" required>
                                 <button type="submit" class="newsletter-btn">
                                     <i class="fas fa-paper-plane"></i>
-                                    <span id="footer-newsletter-btn">Bashkohu</span>
+                                    <span id="footer-newsletter-btn" data-translate="footer.newsletterBtn">Bashkohu</span>
                                 </button>
                 </div>
                         </form>
                 </div>
-                </div>
+                </div> -->
                 </div>
             </div>
 
@@ -700,15 +700,15 @@
             <div class="container">
                 <div class="bottom-content">
                     <div class="copyright">
-                        <p id="footer-copyright">© 2024 X Car Rental. Të gjitha të drejtat e rezervuara.</p>
+                        <p id="footer-copyright" data-translate="footer.copyright">© 2024 X Car Rental. Të gjitha të drejtat e rezervuara.</p>
                     </div>
                     <div class="legal-links">
-                        <a href="#privacy" id="footer-privacy-policy">Privacy Policy</a>
+                        <a href="#privacy" id="footer-privacy-policy" data-translate="footer.privacyPolicy">Privacy Policy</a>
                         <span class="separator">|</span>
-                        <a href="#terms" id="footer-terms-service">Terms of Service</a>
+                        <a href="#terms" id="footer-terms-service" data-translate="footer.termsService">Terms of Service</a>
                     </div>
                     <div class="made-with-love">
-                        <span id="footer-made-with-love">Made with ❤️ in Macedonia</span>
+                        <span id="footer-made-with-love" data-translate="footer.madeWithLove">Made with ❤️ in Macedonia</span>
                     </div>
                 </div>
             </div>
