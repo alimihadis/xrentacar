@@ -74,32 +74,82 @@ function createCarCard(car, index) {
         <div class="car-specs">
             <div class="spec-item">
                 <i class="fas fa-users"></i>
-                <span data-translate="cars.card.seats">${car.seats} vende</span>
+                <span class="car-seats">${car.seats}</span>
             </div>
             <div class="spec-item">
                 <i class="fas fa-gas-pump"></i>
-                <span data-translate="cars.card.fuel">${car.fuel}</span>
+                <span class="car-fuel">${car.fuel}</span>
             </div>
             <div class="spec-item">
                 <i class="fas fa-cog"></i>
-                <span data-translate="cars.card.transmission">${car.transmission}</span>
+                <span class="car-transmission">${car.transmission}</span>
             </div>
             <div class="spec-item">
                 <i class="fas fa-suitcase"></i>
-                <span data-translate="cars.card.luggage">${car.luggage} çanta</span>
+                <span class="car-luggage">${car.luggage}</span>
             </div>
         </div>
         <div class="car-features">
             ${car.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
         </div>
-        <div class="car-price">€${car.price}/<span data-translate="cars.card.perDay">ditë</span></div>
+        <div class="car-price">€${car.price}/<span class="car-per-day"></span></div>
         <button class="whatsapp-btn" onclick="bookCarWhatsApp('${car.name}', ${car.price})">
             <i class="fab fa-whatsapp"></i>
-            <span data-translate="cars.card.bookButton">Rezervo në WhatsApp</span>
+            <span class="car-book-button"></span>
         </button>
     `;
     
+    // Apply current language to the card after creation
+    setTimeout(() => {
+        const currentLang = localStorage.getItem('selectedLanguage');
+        if (currentLang && window.TRANSLATIONS && window.TRANSLATIONS[currentLang]) {
+            const cardTranslations = window.TRANSLATIONS[currentLang].cars.card;
+            if (cardTranslations) {
+                updateSingleCarCard(card, cardTranslations);
+            }
+        }
+    }, 100);
+    
     return card;
+}
+
+// Update single car card language
+function updateSingleCarCard(card, cardTranslations) {
+    // Update seats
+    const seatsElement = card.querySelector('.car-seats');
+    if (seatsElement) {
+        seatsElement.textContent = cardTranslations.seats;
+    }
+    
+    // Update fuel
+    const fuelElement = card.querySelector('.car-fuel');
+    if (fuelElement) {
+        fuelElement.textContent = cardTranslations.fuel;
+    }
+    
+    // Update transmission
+    const transmissionElement = card.querySelector('.car-transmission');
+    if (transmissionElement) {
+        transmissionElement.textContent = cardTranslations.transmission;
+    }
+    
+    // Update luggage
+    const luggageElement = card.querySelector('.car-luggage');
+    if (luggageElement) {
+        luggageElement.textContent = cardTranslations.luggage;
+    }
+    
+    // Update per day text
+    const perDayElement = card.querySelector('.car-per-day');
+    if (perDayElement) {
+        perDayElement.textContent = cardTranslations.perDay;
+    }
+    
+    // Update book button
+    const bookButtonElement = card.querySelector('.car-book-button');
+    if (bookButtonElement) {
+        bookButtonElement.textContent = cardTranslations.bookButton;
+    }
 }
 
 // Animate car cards entrance
@@ -340,19 +390,11 @@ function setupScrollAnimations() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                                  // Special handling for cars section
-                  if (entry.target.classList.contains('cars-section')) {
-                      console.log('🚗 Cars section is now visible, ensuring cars are loaded...');
-                      // Ensure cars are loaded when section becomes visible
-                      if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
-                          displayCars(carsData);
-                          animateCarCards();
-                          console.log('✅ Cars loaded and animated in cars section');
-                      } else {
-                          console.log('⏳ Cars data not ready, retrying...');
-                          retryCarLoading();
-                      }
-                  }
+                                                  // Special handling for cars section - don't refresh cars automatically
+                if (entry.target.classList.contains('cars-section')) {
+                    console.log('🚗 Cars section is now visible');
+                    // Don't refresh cars - let them stay in current language
+                }
             }
         });
     }, observerOptions);
@@ -676,7 +718,7 @@ function initializeWebsite() {
         // About Us functionality
         setupAboutUsFeatures();
         
-        // Language system
+        // Language system - don't auto-setup, let user choose
         setupLanguageSwitcher();
         
         // Footer functionality
@@ -704,9 +746,12 @@ function setupLanguageSwitcher() {
     
     // Wait for LanguageSystem to be available
     const checkLanguageSystem = () => {
+        console.log('🔍 Checking LanguageSystem availability...');
+        console.log('🌍 window.LanguageSystem:', window.LanguageSystem);
+        
         if (window.LanguageSystem) {
             console.log('✅ LanguageSystem found, initializing...');
-            window.LanguageSystem.initializeLanguageSystem();
+            // Setup language event listeners
             setupLanguageEventListeners();
         } else {
             console.log('⏳ LanguageSystem not ready, retrying...');
@@ -788,7 +833,16 @@ function setupLanguageEventListeners() {
 }
 
 // Initialize when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', initializeWebsite);
+document.addEventListener('DOMContentLoaded', function() {
+    initializeWebsite();
+    
+    // Don't auto-setup language switcher - let user choose manually
+    // setTimeout(() => {
+    //     if (window.LanguageSystem) {
+    //         setupLanguageSwitcher();
+    //     }
+    // }, 500);
+});
 
 // Preloader functionality
 function hidePreloader() {
@@ -983,34 +1037,12 @@ function retryCarLoading() {
 
 // Setup footer functionality
 function setupFooterFeatures() {
-    setupBackToTop();
+
     setupNewsletterForm();
     setupFooterAnimations();
 }
 
-// Back to Top functionality
-function setupBackToTop() {
-    const backToTopBtn = document.getElementById('back-to-top');
-    
-    if (backToTopBtn) {
-        // Show/hide button based on scroll
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-        
-        // Smooth scroll to top
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-}
+
 
 // Newsletter form functionality
 function setupNewsletterForm() {

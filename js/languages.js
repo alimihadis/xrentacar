@@ -1105,6 +1105,8 @@ function switchLanguage(lang) {
     // Update language switcher UI
     updateLanguageSwitcher(lang);
     
+
+    
     console.log(`🌍 Language switched to: ${LANGUAGES[lang]}`);
 }
 
@@ -1150,7 +1152,14 @@ function updatePageContent(lang) {
         updateElementText('filter-family', texts.cars.filters.family);
         
         // Update car cards with new translations
-        updateCarCardsLanguage(texts.cars.card);
+        console.log('🚗 About to update car cards...');
+        const carCards = document.querySelectorAll('.car-card');
+        console.log(`🔍 Found ${carCards.length} car cards`);
+        if (carCards.length > 0) {
+            updateCarCardsLanguage(texts.cars.card);
+        } else {
+            console.log('⏳ No car cards found yet, will update later');
+        }
         
         // Features Section
         updateElementText('features-title', texts.features.title);
@@ -1215,42 +1224,42 @@ function updateElementText(elementId, text) {
 
 // Update car cards language
 function updateCarCardsLanguage(cardTranslations) {
-    console.log('🚗 Updating car cards language:', cardTranslations);
+    console.log('🚗 updateCarCardsLanguage called with:', cardTranslations);
     
     const carCards = document.querySelectorAll('.car-card');
     carCards.forEach(card => {
         // Update seats
-        const seatsElement = card.querySelector('[data-translate="cars.card.seats"]');
+        const seatsElement = card.querySelector('.car-seats');
         if (seatsElement) {
             seatsElement.textContent = cardTranslations.seats;
         }
         
         // Update fuel
-        const fuelElement = card.querySelector('[data-translate="cars.card.fuel"]');
+        const fuelElement = card.querySelector('.car-fuel');
         if (fuelElement) {
             fuelElement.textContent = cardTranslations.fuel;
         }
         
         // Update transmission
-        const transmissionElement = card.querySelector('[data-translate="cars.card.transmission"]');
+        const transmissionElement = card.querySelector('.car-transmission');
         if (transmissionElement) {
             transmissionElement.textContent = cardTranslations.transmission;
         }
         
         // Update luggage
-        const luggageElement = card.querySelector('[data-translate="cars.card.luggage"]');
+        const luggageElement = card.querySelector('.car-luggage');
         if (luggageElement) {
             luggageElement.textContent = cardTranslations.luggage;
         }
         
         // Update per day text
-        const perDayElement = card.querySelector('[data-translate="cars.card.perDay"]');
+        const perDayElement = card.querySelector('.car-per-day');
         if (perDayElement) {
             perDayElement.textContent = cardTranslations.perDay;
         }
         
         // Update book button
-        const bookButtonElement = card.querySelector('[data-translate="cars.card.bookButton"]');
+        const bookButtonElement = card.querySelector('.car-book-button');
         if (bookButtonElement) {
             bookButtonElement.textContent = cardTranslations.bookButton;
         }
@@ -1362,12 +1371,10 @@ function updateLanguageSwitcher(selectedLang) {
 function initializeLanguageSystem() {
     console.log('🔧 Initializing language system...');
     
-    // Get saved language or default to Albanian
-    const savedLang = localStorage.getItem('selectedLanguage') || 'sq';
-    console.log(`📱 Saved language: ${savedLang}`);
-    
-    // Apply saved language
-    switchLanguage(savedLang);
+    // Don't auto-apply saved language - let user choose manually
+    // const savedLang = localStorage.getItem('selectedLanguage') || 'sq';
+    // console.log(`📱 Saved language: ${savedLang}`);
+    // switchLanguage(savedLang);
     
     console.log('🌍 Multi-language system initialized successfully');
 }
@@ -1376,5 +1383,8 @@ function initializeLanguageSystem() {
 window.LanguageSystem = {
     switchLanguage,
     initializeLanguageSystem,
-    getCurrentLanguage: () => localStorage.getItem('selectedLanguage') || 'sq'
+    getCurrentLanguage: () => localStorage.getItem('selectedLanguage')
 };
+
+// Make updateCarCardsLanguage globally available
+window.updateCarCardsLanguage = updateCarCardsLanguage;
