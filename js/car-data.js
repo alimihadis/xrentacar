@@ -338,3 +338,37 @@ const CarDataHelpers = {
 // Make variables globally available for browser
 window.carsData = carsData;
 window.CarDataHelpers = CarDataHelpers;
+
+// Global function to force load cars (accessible from anywhere)
+window.forceLoadCars = function() {
+    console.log('🌍 Global forceLoadCars called');
+    if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+        console.log('✅ Global: carsData available, displaying cars...');
+        if (typeof displayCars === 'function') {
+            displayCars(carsData);
+            if (typeof animateCarCards === 'function') {
+                animateCarCards();
+            }
+        }
+        return true;
+    } else {
+        console.log('❌ Global: carsData not available');
+        return false;
+    }
+};
+
+// Auto-trigger cars loading when this script is fully loaded
+setTimeout(() => {
+    console.log('🚗 carsData loaded:', carsData.length, 'cars');
+    
+    // Try to display cars if script.js is ready
+    if (typeof displayCars === 'function') {
+        console.log('✅ displayCars function found, displaying cars...');
+        displayCars(carsData);
+        if (typeof animateCarCards === 'function') {
+            animateCarCards();
+        }
+    } else {
+        console.log('⏳ displayCars function not ready yet...');
+    }
+}, 100);

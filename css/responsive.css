@@ -276,11 +276,24 @@
         padding: 20px 15px;
         margin-bottom: 15px;
         border-radius: 12px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .car-image {
         height: 180px; /* Smaller height for mobile */
         border-radius: 8px;
+    }
+    
+    .car-image-placeholder {
+        min-height: 120px; /* Smaller for mobile */
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .car-image-placeholder i {
+        font-size: 2.5rem !important; /* Smaller icon for mobile */
     }
     
     .car-name {
@@ -809,6 +822,19 @@
     .cars-section,
     .contact {
         padding: 50px 0;
+    }
+    
+    /* Ensure cars section is visible in mobile */
+    .cars-section {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .cars-grid {
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     /* ============================================

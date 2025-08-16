@@ -25,6 +25,8 @@ function displayCars(carsToShow) {
         return;
     }
     
+    console.log(`🚗 Displaying ${carsToShow.length} cars...`);
+    
     // Clear existing content
     container.innerHTML = '';
     
@@ -43,7 +45,10 @@ function displayCars(carsToShow) {
     carsToShow.forEach((car, index) => {
         const card = createCarCard(car, index);
         container.appendChild(card);
+        console.log(`✅ Created card for ${car.name}`);
     });
+    
+    console.log(`🎯 Total cards created: ${container.children.length}`);
     
     // Trigger animation for new cards
     animateCarCards();
@@ -60,7 +65,10 @@ function createCarCard(car, index) {
     // Create card HTML
     card.innerHTML = `
         <div class="car-image">
-            <span style="font-size: 0.9rem; color: #666;">Foto ${car.name}</span>
+            <div class="car-image-placeholder">
+                <i class="fas fa-car" style="font-size: 3rem; color: var(--primary-color);"></i>
+                <span style="font-size: 1rem; color: var(--text-white); margin-top: 10px;">${car.name}</span>
+            </div>
         </div>
         <h3 class="car-name">${car.name}</h3>
         <div class="car-specs">
@@ -296,6 +304,21 @@ function setupSmoothScrolling() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                
+                // Special handling for cars section navigation
+                if (targetId === 'cars') {
+                    console.log('🎯 Cars section navigation clicked, ensuring cars are loaded...');
+                    setTimeout(() => {
+                        if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+                            displayCars(carsData);
+                            animateCarCards();
+                            console.log('✅ Cars loaded via navigation click');
+                        } else {
+                            console.log('⏳ Cars data not ready via navigation, retrying...');
+                            retryCarLoading();
+                        }
+                    }, 800); // Wait for scroll to complete
+                }
             }
         });
     });
@@ -317,10 +340,19 @@ function setupScrollAnimations() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Special handling for cars section
-                if (entry.target.classList.contains('cars-section')) {
-                    animateCarCards();
-                }
+                                  // Special handling for cars section
+                  if (entry.target.classList.contains('cars-section')) {
+                      console.log('🚗 Cars section is now visible, ensuring cars are loaded...');
+                      // Ensure cars are loaded when section becomes visible
+                      if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+                          displayCars(carsData);
+                          animateCarCards();
+                          console.log('✅ Cars loaded and animated in cars section');
+                      } else {
+                          console.log('⏳ Cars data not ready, retrying...');
+                          retryCarLoading();
+                      }
+                  }
             }
         });
     }, observerOptions);
@@ -507,10 +539,27 @@ function setupMobileMenu() {
         mobileMenuClose.addEventListener('click', closeMobileMenu);
     }
 
-    // Close menu when clicking on links
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+          // Close menu when clicking on links
+      mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+              closeMobileMenu();
+              
+              // Special handling for cars link in mobile menu
+              if (link.getAttribute('href') === '#cars') {
+                  console.log('📱 Mobile cars link clicked, ensuring cars are loaded...');
+                  setTimeout(() => {
+                      if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+                          displayCars(carsData);
+                          animateCarCards();
+                          console.log('✅ Cars loaded via mobile navigation');
+                      } else {
+                          console.log('⏳ Cars data not ready via mobile navigation, retrying...');
+                          retryCarLoading();
+                      }
+                  }, 800); // Wait longer for mobile scroll
+              }
+          });
+      });
 
     // Close menu when clicking outside
     mobileMenu.addEventListener('click', (e) => {
@@ -576,6 +625,9 @@ function setupLazyLoading() {
 // Main initialization function
 function initializeWebsite() {
     try {
+        console.log('🚀 Initializing website...');
+        console.log('📊 carsData status:', typeof carsData, carsData ? carsData.length : 'undefined');
+        
         // Check if carsData is available
         if (typeof carsData === 'undefined' || !carsData || carsData.length === 0) {
             console.error('❌ carsData not available, retrying in 100ms...');
@@ -583,12 +635,25 @@ function initializeWebsite() {
             return;
         }
         
-        // Core functionality
-        if (safeLoadCars()) {
-            console.log('✅ Cars loaded in initializeWebsite');
+        // Core functionality - Simple approach
+        console.log('🎯 Attempting to load cars...');
+        if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+            console.log('✅ carsData available, displaying cars...');
+            displayCars(carsData);
+            animateCarCards();
         } else {
-            console.log('⏳ Cars not ready, starting retry mechanism...');
-            retryCarLoading();
+            console.log('❌ carsData not available, will retry...');
+            // Retry after a short delay
+            setTimeout(() => {
+                if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+                    console.log('✅ Retry successful, carsData now available...');
+                    displayCars(carsData);
+                    animateCarCards();
+                } else {
+                    console.log('❌ Still no carsData, final retry...');
+                    retryCarLoading();
+                }
+            }, 200);
         }
         setupFilters();
         
@@ -725,41 +790,54 @@ function setupLanguageEventListeners() {
 // Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializeWebsite);
 
+// Additional safety check when window is fully loaded
+window.addEventListener('load', function() {
+    console.log('🌍 Window fully loaded, checking cars...');
+    setTimeout(() => {
+        if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+            console.log('✅ Window load: carsData available, displaying cars...');
+            displayCars(carsData);
+            animateCarCards();
+        } else {
+            console.log('❌ Window load: carsData not available, calling global function...');
+            if (typeof window.forceLoadCars === 'function') {
+                window.forceLoadCars();
+            }
+        }
+    }, 1000);
+});
+
 // ============================================
 // CAR LOADING SAFETY FUNCTIONS
 // ============================================
 
-// Safe car loading function
-function safeLoadCars() {
-    if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
-        console.log('🚗 Loading cars safely...');
-        displayCars(carsData);
-        return true;
-    }
-    return false;
+// Check if device is mobile
+function isMobileDevice() {
+    return window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
-// Retry car loading
-function retryCarLoading(maxAttempts = 10) {
-    let attempts = 0;
-    
-    const attemptLoad = () => {
-        attempts++;
-        console.log(`🔄 Attempt ${attempts} to load cars...`);
-        
-        if (safeLoadCars()) {
-            console.log('✅ Cars loaded successfully!');
-            return;
-        }
-        
-        if (attempts < maxAttempts) {
-            setTimeout(attemptLoad, 200);
+// Simple retry function
+function retryCarLoading() {
+    console.log('🔄 Retrying car loading...');
+    setTimeout(() => {
+        if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+            console.log('✅ Retry successful, displaying cars...');
+            displayCars(carsData);
+            animateCarCards();
         } else {
-            console.error('❌ Failed to load cars after maximum attempts');
+            console.log('❌ Retry failed, trying one more time...');
+            // One more attempt
+            setTimeout(() => {
+                if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+                    console.log('✅ Final retry successful!');
+                    displayCars(carsData);
+                    animateCarCards();
+                } else {
+                    console.error('❌ Failed to load cars after all attempts');
+                }
+            }, 1000);
         }
-    };
-    
-    attemptLoad();
+    }, 500);
 }
 
 // ============================================
