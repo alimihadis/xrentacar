@@ -19,6 +19,12 @@ function displayCars(carsToShow) {
         return;
     }
     
+    // Ensure we have cars data
+    if (!carsToShow || carsToShow.length === 0) {
+        console.warn('No cars data provided to displayCars');
+        return;
+    }
+    
     // Clear existing content
     container.innerHTML = '';
     
@@ -570,8 +576,20 @@ function setupLazyLoading() {
 // Main initialization function
 function initializeWebsite() {
     try {
+        // Check if carsData is available
+        if (typeof carsData === 'undefined' || !carsData || carsData.length === 0) {
+            console.error('❌ carsData not available, retrying in 100ms...');
+            setTimeout(initializeWebsite, 100);
+            return;
+        }
+        
         // Core functionality
-        displayCars(carsData);
+        if (safeLoadCars()) {
+            console.log('✅ Cars loaded in initializeWebsite');
+        } else {
+            console.log('⏳ Cars not ready, starting retry mechanism...');
+            retryCarLoading();
+        }
         setupFilters();
         
         // Visual effects
@@ -705,6 +723,43 @@ function setupLanguageEventListeners() {
 
 // Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializeWebsite);
+
+// ============================================
+// CAR LOADING SAFETY FUNCTIONS
+// ============================================
+
+// Safe car loading function
+function safeLoadCars() {
+    if (typeof carsData !== 'undefined' && carsData && carsData.length > 0) {
+        console.log('🚗 Loading cars safely...');
+        displayCars(carsData);
+        return true;
+    }
+    return false;
+}
+
+// Retry car loading
+function retryCarLoading(maxAttempts = 10) {
+    let attempts = 0;
+    
+    const attemptLoad = () => {
+        attempts++;
+        console.log(`🔄 Attempt ${attempts} to load cars...`);
+        
+        if (safeLoadCars()) {
+            console.log('✅ Cars loaded successfully!');
+            return;
+        }
+        
+        if (attempts < maxAttempts) {
+            setTimeout(attemptLoad, 200);
+        } else {
+            console.error('❌ Failed to load cars after maximum attempts');
+        }
+    };
+    
+    attemptLoad();
+}
 
 // ============================================
 // PREMIUM FOOTER FUNCTIONALITY
