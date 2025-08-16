@@ -625,6 +625,7 @@ function initializeWebsite() {
         
         console.log('✅ X Car Rental website initialized successfully!');
         console.log(`📊 Loaded ${carsData.length} cars total`);
+        console.log('🚗 Cars loading system ready!');
         
     } catch (error) {
         console.error('❌ Error initializing website:', error);
