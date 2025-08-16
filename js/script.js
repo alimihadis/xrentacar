@@ -790,6 +790,143 @@ function setupLanguageEventListeners() {
 // Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializeWebsite);
 
+// Preloader functionality
+function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('hidden');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+}
+
+// Advanced preloader animation sequence
+function startPreloaderAnimation() {
+    console.log('🚗 Starting preloader animation sequence...');
+    
+    const logo = document.getElementById('power-logo');
+    const powerFill = document.getElementById('power-fill');
+    const logoGlow = document.getElementById('logo-glow');
+    const carSilhouette = document.getElementById('car-silhouette');
+    const progressCounter = document.getElementById('progress-counter');
+    const readyMessage = document.getElementById('ready-message');
+    const carGlow = document.getElementById('car-glow');
+    
+    // Phase 1: Logo Fade-In (0-0.5s)
+    setTimeout(() => {
+        logo.classList.add('visible');
+        progressCounter.classList.add('visible');
+        progressCounter.textContent = '0%';
+    }, 100);
+    
+    // Phase 2: Power-Up (0.5-1.5s)
+    setTimeout(() => {
+        powerFill.classList.add('active');
+        logoGlow.classList.add('active');
+        carSilhouette.classList.add('visible');
+        
+        // Progress animation
+        let progress = 0;
+        const progressInterval = setInterval(() => {
+            progress += 2;
+            progressCounter.textContent = progress + '%';
+            if (progress >= 70) {
+                clearInterval(progressInterval);
+            }
+        }, 30);
+        
+        // Activate car glow effect
+        carGlow.classList.add('active');
+        
+    }, 500);
+    
+    // Phase 3: Car Separation (1.5-2s)
+    setTimeout(() => {
+        carSilhouette.classList.add('separated');
+        
+        // Progress 70-90%
+        let progress = 70;
+        const progressInterval = setInterval(() => {
+            progress += 2;
+            progressCounter.textContent = progress + '%';
+            if (progress >= 90) {
+                clearInterval(progressInterval);
+            }
+        }, 30);
+        
+    }, 1500);
+    
+    // Phase 4: Drive-Out (2-2.5s)
+    setTimeout(() => {
+        carSilhouette.classList.add('driving');
+        
+        // Progress 90-100%
+        let progress = 90;
+        const progressInterval = setInterval(() => {
+            progress += 2;
+            progressCounter.textContent = progress + '%';
+            if (progress >= 100) {
+                clearInterval(progressInterval);
+            }
+        }, 30);
+        
+        // Create orange particles
+        createOrangeParticles();
+        
+    }, 2000);
+    
+    // Phase 5: Fade Transition (2.5-3s)
+    setTimeout(() => {
+        logo.style.opacity = '0';
+        carSilhouette.style.opacity = '0';
+        progressCounter.style.opacity = '0';
+        
+        readyMessage.classList.add('visible');
+        
+        // Hide preloader after showing ready message
+        setTimeout(() => {
+            hidePreloader();
+        }, 1000);
+        
+    }, 2500);
+}
+
+// Create orange particles for car trail
+function createOrangeParticles() {
+    const container = document.getElementById('particle-container');
+    const car = document.getElementById('car-silhouette');
+    
+    for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+            const particle = document.createElement('div');
+            particle.className = 'orange-particle';
+            
+            const carRect = car.getBoundingClientRect();
+            particle.style.left = (carRect.left + 60) + 'px';
+            particle.style.top = (carRect.top + 30) + 'px';
+            
+            container.appendChild(particle);
+            
+            // Remove particle after animation
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        }, i * 50);
+    }
+}
+
+// Start preloader animation when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    startPreloaderAnimation();
+});
+
+// Hide preloader when everything is loaded (fallback)
+window.addEventListener('load', function() {
+    console.log('🌍 Window fully loaded...');
+    // Preloader will be hidden by animation sequence
+});
+
 // Additional safety check when window is fully loaded
 window.addEventListener('load', function() {
     console.log('🌍 Window fully loaded, checking cars...');

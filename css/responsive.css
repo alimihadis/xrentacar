@@ -824,6 +824,17 @@
         padding: 50px 0;
     }
     
+    /* Preloader responsive */
+    .preloader-logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+    }
+    
+    .logo-section {
+        margin-bottom: 1.5rem;
+    }
+    
     /* Ensure cars section is visible in mobile */
     .cars-section {
         display: block !important;
