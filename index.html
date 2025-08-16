@@ -132,6 +132,44 @@
 
             <div class="cars-grid" id="cars-container">
                 <!-- Cars will be loaded by JavaScript -->
+                <!-- Template for car cards with translations -->
+                <template id="car-card-template">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <div class="car-image-placeholder">
+                                <i class="fas fa-car" style="font-size: 3rem; color: var(--primary-color);"></i>
+                                <span style="font-size: 1rem; color: var(--text-white); margin-top: 10px;" data-translate="car.name"></span>
+                            </div>
+                        </div>
+                        <h3 class="car-name" data-translate="car.name"></h3>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-users"></i>
+                                <span data-translate="cars.card.seats"></span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span data-translate="cars.card.fuel"></span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-cog"></i>
+                                <span data-translate="cars.card.transmission"></span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-suitcase"></i>
+                                <span data-translate="cars.card.luggage"></span>
+                            </div>
+                        </div>
+                        <div class="car-features">
+                            <!-- Features will be populated by JavaScript -->
+                        </div>
+                        <div class="car-price">€<span data-translate="car.price"></span>/<span data-translate="cars.card.perDay">ditë</span></div>
+                        <button class="whatsapp-btn" onclick="bookCarWhatsApp(this.dataset.carName, this.dataset.carPrice)">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-translate="cars.card.bookButton"></span>
+                        </button>
+                    </div>
+                </template>
             </div>
         </div>
     </section>

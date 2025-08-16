@@ -10,7 +10,7 @@ const LANGUAGES = {
     en: 'English'
 };
 
-const TRANSLATIONS = {
+window.TRANSLATIONS = {
     sq: {
         // Navigation
         nav: {
@@ -40,7 +40,30 @@ const TRANSLATIONS = {
                 suv: 'SUV',
                 family: 'Familjare'
             },
-            bookButton: 'Rezervo në WhatsApp'
+            bookButton: 'Rezervo në WhatsApp',
+            // Car card elements
+            card: {
+                seats: 'vende',
+                fuel: 'Karburant',
+                transmission: 'Transmisioni',
+                luggage: 'çanta',
+                perDay: 'ditë',
+                bookButton: 'Rezervo në WhatsApp',
+                noCars: {
+                    title: 'Nuk ka makina të disponueshme',
+                    message: 'Provoni një kategori tjetër ose kontaktoni me ne'
+                }
+            },
+            // WhatsApp message templates
+            whatsappMessage: {
+                greeting: 'Përshëndetje! Dëshiroj të rezervoj',
+                forDays: 'për',
+                days: 'ditë',
+                price: 'Çmimi:',
+                perDay: 'ditë',
+                category: 'Kategoria:',
+                contact: 'Ju lutem më kontaktoni për më shumë informacion.'
+            }
         },
 
         // Features Section
@@ -285,7 +308,30 @@ const TRANSLATIONS = {
                 suv: 'SUV',
                 family: 'Aile'
             },
-            bookButton: 'WhatsApp\'ta Rezervasyon Yap'
+            bookButton: 'WhatsApp\'ta Rezervasyon Yap',
+            // Car card elements
+            card: {
+                seats: 'koltuk',
+                fuel: 'Yakıt',
+                transmission: 'Şanzıman',
+                luggage: 'valiz',
+                perDay: 'gün',
+                bookButton: 'WhatsApp\'ta Rezervasyon Yap',
+                noCars: {
+                    title: 'Mevcut araba yok',
+                    message: 'Başka bir kategori deneyin veya bizimle iletişime geçin'
+                }
+            },
+            // WhatsApp message templates
+            whatsappMessage: {
+                greeting: 'Merhaba! Kiralamak istiyorum',
+                forDays: 'için',
+                days: 'gün',
+                price: 'Fiyat:',
+                perDay: 'gün',
+                category: 'Kategori:',
+                contact: 'Daha fazla bilgi için lütfen benimle iletişime geçin.'
+            }
         },
 
         // Features Section
@@ -530,7 +576,30 @@ const TRANSLATIONS = {
                 suv: 'SUV',
                 family: 'Семејни'
             },
-            bookButton: 'Резервирај на WhatsApp'
+            bookButton: 'Резервирај на WhatsApp',
+            // Car card elements
+            card: {
+                seats: 'места',
+                fuel: 'Гориво',
+                transmission: 'Пренос',
+                luggage: 'торби',
+                perDay: 'ден',
+                bookButton: 'Резервирај на WhatsApp',
+                noCars: {
+                    title: 'Нема достапни автомобили',
+                    message: 'Пробајте друга категорија или контактирајте нè'
+                }
+            },
+            // WhatsApp message templates
+            whatsappMessage: {
+                greeting: 'Здраво! Сакам да резервирам',
+                forDays: 'за',
+                days: 'дена',
+                price: 'Цена:',
+                perDay: 'ден',
+                category: 'Категорија:',
+                contact: 'Ве молиме контактирајте ме за повеќе информации.'
+            }
         },
 
         // Features Section
@@ -775,7 +844,30 @@ const TRANSLATIONS = {
                 suv: 'SUV',
                 family: 'Family'
             },
-            bookButton: 'Book on WhatsApp'
+            bookButton: 'Book on WhatsApp',
+            // Car card elements
+            card: {
+                seats: 'seats',
+                fuel: 'Fuel',
+                transmission: 'Transmission',
+                luggage: 'bags',
+                perDay: 'day',
+                bookButton: 'Book on WhatsApp',
+                noCars: {
+                    title: 'No cars available',
+                    message: 'Try another category or contact us'
+                }
+            },
+            // WhatsApp message templates
+            whatsappMessage: {
+                greeting: 'Hello! I would like to book',
+                forDays: 'for',
+                days: 'days',
+                price: 'Price:',
+                perDay: 'day',
+                category: 'Category:',
+                contact: 'Please contact me for more information.'
+            }
         },
 
         // Features Section
@@ -1057,6 +1149,9 @@ function updatePageContent(lang) {
         updateElementText('filter-suv', texts.cars.filters.suv);
         updateElementText('filter-family', texts.cars.filters.family);
         
+        // Update car cards with new translations
+        updateCarCardsLanguage(texts.cars.card);
+        
         // Features Section
         updateElementText('features-title', texts.features.title);
         updateElementText('features-subtitle', texts.features.subtitle);
@@ -1116,6 +1211,52 @@ function updateElementText(elementId, text) {
     if (element) {
         element.textContent = text;
     }
+}
+
+// Update car cards language
+function updateCarCardsLanguage(cardTranslations) {
+    console.log('🚗 Updating car cards language:', cardTranslations);
+    
+    const carCards = document.querySelectorAll('.car-card');
+    carCards.forEach(card => {
+        // Update seats
+        const seatsElement = card.querySelector('[data-translate="cars.card.seats"]');
+        if (seatsElement) {
+            seatsElement.textContent = cardTranslations.seats;
+        }
+        
+        // Update fuel
+        const fuelElement = card.querySelector('[data-translate="cars.card.fuel"]');
+        if (fuelElement) {
+            fuelElement.textContent = cardTranslations.fuel;
+        }
+        
+        // Update transmission
+        const transmissionElement = card.querySelector('[data-translate="cars.card.transmission"]');
+        if (transmissionElement) {
+            transmissionElement.textContent = cardTranslations.transmission;
+        }
+        
+        // Update luggage
+        const luggageElement = card.querySelector('[data-translate="cars.card.luggage"]');
+        if (luggageElement) {
+            luggageElement.textContent = cardTranslations.luggage;
+        }
+        
+        // Update per day text
+        const perDayElement = card.querySelector('[data-translate="cars.card.perDay"]');
+        if (perDayElement) {
+            perDayElement.textContent = cardTranslations.perDay;
+        }
+        
+        // Update book button
+        const bookButtonElement = card.querySelector('[data-translate="cars.card.bookButton"]');
+        if (bookButtonElement) {
+            bookButtonElement.textContent = cardTranslations.bookButton;
+        }
+    });
+    
+    console.log(`✅ Updated ${carCards.length} car cards with new language`);
 }
 
 // Function to update all elements with data-translate attributes

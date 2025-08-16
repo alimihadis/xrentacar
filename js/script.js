@@ -74,28 +74,28 @@ function createCarCard(car, index) {
         <div class="car-specs">
             <div class="spec-item">
                 <i class="fas fa-users"></i>
-                <span>${car.seats} vende</span>
+                <span data-translate="cars.card.seats">${car.seats} vende</span>
             </div>
             <div class="spec-item">
                 <i class="fas fa-gas-pump"></i>
-                <span>${car.fuel}</span>
+                <span data-translate="cars.card.fuel">${car.fuel}</span>
             </div>
             <div class="spec-item">
                 <i class="fas fa-cog"></i>
-                <span>${car.transmission}</span>
+                <span data-translate="cars.card.transmission">${car.transmission}</span>
             </div>
             <div class="spec-item">
                 <i class="fas fa-suitcase"></i>
-                <span>${car.luggage} çanta</span>
+                <span data-translate="cars.card.luggage">${car.luggage} çanta</span>
             </div>
         </div>
         <div class="car-features">
             ${car.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
         </div>
-        <div class="car-price">€${car.price}/ditë</div>
+        <div class="car-price">€${car.price}/<span data-translate="cars.card.perDay">ditë</span></div>
         <button class="whatsapp-btn" onclick="bookCarWhatsApp('${car.name}', ${car.price})">
             <i class="fab fa-whatsapp"></i>
-            Rezervo në WhatsApp
+            <span data-translate="cars.card.bookButton">Rezervo në WhatsApp</span>
         </button>
     `;
     

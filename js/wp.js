@@ -16,18 +16,29 @@ const WHATSAPP_CONFIG = {
 
 // Create formatted WhatsApp message
 function createWhatsAppMessage(carName, carPrice, additionalInfo = null) {
-    let message = `🚗 *Rezervim Makine - ${WHATSAPP_CONFIG.businessName}*\n\n`;
+    // Get current language
+    const currentLang = localStorage.getItem('selectedLanguage') || 'sq';
+    const translations = window.TRANSLATIONS && window.TRANSLATIONS[currentLang] ? window.TRANSLATIONS[currentLang].cars.whatsappMessage : null;
     
-    // Car details
-    message += `*Makina e zgjedhur:* ${carName}\n`;
-    message += `*Çmimi:* €${carPrice}/ditë\n\n`;
+    // Fallback to Albanian if translations not available
+    if (!translations) {
+        let message = `🚗 *Rezervim Makine - ${WHATSAPP_CONFIG.businessName}*\n\n`;
+        message += `*Makina e zgjedhur:* ${carName}\n`;
+        message += `*Çmimi:* €${carPrice}/ditë\n\n`;
+        message += `Përshëndetje! Dëshiroj të rezervoj këtë makinë.\n\n`;
+        message += `🙏 Faleminderit për zgjedhjen e ${WHATSAPP_CONFIG.businessName}!\n`;
+        message += `Ju lutem kontaktoni për detaje dhe konfirmim të rezervimit.`;
+        return encodeURIComponent(message);
+    }
+    
+    // Create message in selected language
+    let message = `🚗 *${translations.greeting} ${carName}*\n\n`;
+    message += `*${translations.price}* €${carPrice}/${translations.perDay}\n\n`;
     
     // Additional info if provided
     if (additionalInfo) {
         if (additionalInfo.startDate && additionalInfo.endDate) {
-            message += `*Periudha:*\n`;
-            message += `📅 Nga: ${additionalInfo.startDate}\n`;
-            message += `📅 Deri: ${additionalInfo.endDate}\n\n`;
+            message += `*${translations.forDays} ${additionalInfo.startDate} - ${additionalInfo.endDate}*\n\n`;
         }
         
         if (additionalInfo.customerName) {
@@ -43,10 +54,8 @@ function createWhatsAppMessage(carName, carPrice, additionalInfo = null) {
         }
     }
     
-    // Default greeting
-    message += `Përshëndetje! Dëshiroj të rezervoj këtë makinë.\n\n`;
-    message += `🙏 Faleminderit për zgjedhjen e ${WHATSAPP_CONFIG.businessName}!\n`;
-    message += `Ju lutem kontaktoni për detaje dhe konfirmim të rezervimit.`;
+    // Contact message
+    message += `${translations.contact}`;
     
     return encodeURIComponent(message);
 }
@@ -74,7 +83,7 @@ function bookCarWhatsApp(carName, carPrice) {
     window.open(whatsappURL, '_blank');
     
     // Optional: Track booking attempt
-    console.log(`Booking attempt: ${carName} - €${carPrice}/ditë`);
+    console.log(`Booking attempt: ${carName} - €${carPrice}/day`);
 }
 
 // Detailed WhatsApp booking with form data
