@@ -215,7 +215,7 @@ window.TRANSLATIONS = {
                 title: 'X Car Rental - Zyra Kryesore',
                 address: {
                     label: 'Adresa',
-                    value: 'Rruga Ilindenska Nr. 25, 1000 Shkup, Maqedoni'
+                    value: 'Христијан Тодоровски-карпош 92, 1124 Shkup, Maqedoni e Veriut'
                 },
                 workingHours: {
                     label: 'Orari i Punës',
@@ -223,7 +223,7 @@ window.TRANSLATIONS = {
                 },
                 phone: {
                     label: 'Telefoni',
-                    value: '+389 71 294 914'
+                    value: '+389 72533033'
                 },
                 email: {
                     label: 'Email',
@@ -257,7 +257,7 @@ window.TRANSLATIONS = {
             // Company Stats & Address
             experience: '5+ vite eksperiencë',
             clients: '1000+ klientë të kënaqur',
-            address: 'Rruga Ilindenska Nr. 25, 1000 Shkup, Maqedoni',
+            address: 'Христијан Тодоровски-карпош 92, 1124 Shkup, Maqedoni e Veriut',
             // Services
             serviceRental: 'Qira afatshkurtër dhe afatgjatë',
             serviceAirport: 'Transfer aeroporti 24/7',
@@ -265,7 +265,7 @@ window.TRANSLATIONS = {
             serviceDelivery: 'Delivery falas në qytet',
             serviceSupport: 'Mbështetje gjatë gjithë kohës',
             // Contact
-            phone: '+389 71 294 914',
+            phone: '+389 72533033',
             email: 'info@xcarrental.com',
             // Quick Links
             home: 'Ballina',
@@ -483,7 +483,7 @@ window.TRANSLATIONS = {
                 title: 'X Car Rental - Ana Ofis',
                 address: {
                     label: 'Adres',
-                    value: 'Rruga Ilindenska Nr. 25, 1000 Üsküp, Makedonya'
+                    value: 'Христијан Тодоровски-карпош 92, 1124 Üsküp, Kuzey Makedonya'
                 },
                 workingHours: {
                     label: 'Çalışma Saatleri',
@@ -491,7 +491,7 @@ window.TRANSLATIONS = {
                 },
                 phone: {
                     label: 'Telefon',
-                    value: '+389 71 294 914'
+                    value: '+389 72533033'
                 },
                 email: {
                     label: 'E-posta',
@@ -525,7 +525,7 @@ window.TRANSLATIONS = {
             // Company Stats & Address
             experience: '5+ yıl deneyim',
             clients: '1000+ memnun müşteri',
-            address: 'Rruga Ilindenska Nr. 25, 1000 Üsküp, Makedonya',
+            address: 'Христијан Тодоровски-карпош 92, 1124 Üsküp, Kuzey Makedonya',
             // Services
             serviceRental: 'Kısa ve uzun vadeli kiralama',
             serviceAirport: 'Havalimanı transferi 24/7',
@@ -533,7 +533,7 @@ window.TRANSLATIONS = {
             serviceDelivery: 'Şehir içi ücretsiz teslimat',
             serviceSupport: '7/24 destek',
             // Contact
-            phone: '+389 71 294 914',
+            phone: '+389 72533033',
             email: 'info@xcarrental.com',
             // Quick Links
             home: 'Ana Sayfa',
@@ -751,7 +751,7 @@ window.TRANSLATIONS = {
                 title: 'X Car Rental - Главна Канцеларија',
                 address: {
                     label: 'Адреса',
-                    value: 'Руга Илинденска бр. 25, 1000 Скопје, Македонија'
+                    value: 'Христијан Тодоровски-карпош 92, 1124 Скопје, Северна Македонија'
                 },
                 workingHours: {
                     label: 'Работно Време',
@@ -759,7 +759,7 @@ window.TRANSLATIONS = {
                 },
                 phone: {
                     label: 'Телефон',
-                    value: '+389 71 294 914'
+                    value: '+389 72533033'
                 },
                 email: {
                     label: 'Е-пошта',
@@ -793,7 +793,7 @@ window.TRANSLATIONS = {
             // Company Stats & Address
             experience: '5+ години искуство',
             clients: '1000+ задоволни клиенти',
-            address: 'Руга Илинденска бр. 25, 1000 Скопје, Македонија',
+            address: 'Христијан Тодоровски-карпош 92, 1124 Скопје, Северна Македонија',
             // Services
             serviceRental: 'Краткорочно и долгорочно изнајмување',
             serviceAirport: 'Аеродромски трансфер 24/7',
@@ -801,7 +801,7 @@ window.TRANSLATIONS = {
             serviceDelivery: 'Бесплатна испорака во градот',
             serviceSupport: '24/7 поддршка',
             // Contact
-            phone: '+389 71 294 914',
+            phone: '+389 72533033',
             email: 'info@xcarrental.com',
             // Quick Links
             home: 'Почетна',
@@ -1019,7 +1019,7 @@ window.TRANSLATIONS = {
                 title: 'X Car Rental - Main Office',
                 address: {
                     label: 'Address',
-                    value: 'Rruga Ilindenska Nr. 25, 1000 Skopje, Macedonia'
+                    value: 'Христијан Тодоровски-карпош 92, 1124 Skopje, North Macedonia'
                 },
                 workingHours: {
                     label: 'Working Hours',
@@ -1027,7 +1027,7 @@ window.TRANSLATIONS = {
                 },
                 phone: {
                     label: 'Phone',
-                    value: '+389 71 294 914'
+                    value: '+389 72533033'
                 },
                 email: {
                     label: 'Email',
@@ -1061,7 +1061,7 @@ window.TRANSLATIONS = {
             // Company Stats & Address
             experience: '5+ years experience',
             clients: '1000+ satisfied clients',
-            address: 'Rruga Ilindenska Nr. 25, 1000 Skopje, Macedonia',
+            address: 'Христијан Тодоровски-карпош 92, 1124 Skopje, North Macedonia',
             // Services
             serviceRental: 'Short-term and long-term rental',
             serviceAirport: 'Airport transfer 24/7',
@@ -1069,7 +1069,7 @@ window.TRANSLATIONS = {
             serviceDelivery: 'Free delivery in the city',
             serviceSupport: '24/7 support',
             // Contact
-            phone: '+389 71 294 914',
+            phone: '+389 72533033',
             email: 'info@xcarrental.com',
             // Quick Links
             home: 'Home',

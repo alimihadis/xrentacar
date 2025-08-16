@@ -5,7 +5,7 @@
 
 // WhatsApp Configuration
 const WHATSAPP_CONFIG = {
-    phoneNumber: "+38971294914", // NDRYSHO ME NUMRIN TUAJ!
+    phoneNumber: "+38972533033", // NDRYSHO ME NUMRIN TUAJ!
     businessName: "X Car Rental",
     defaultMessage: "Përshëndetje! Dëshiroj të rezervoj një makinë."
 };
@@ -227,9 +227,9 @@ document.addEventListener('DOMContentLoaded', function() {
     setupWhatsAppBooking();
     
     // Check configuration
-    if (!WHATSAPP_CONFIG.phoneNumber || WHATSAPP_CONFIG.phoneNumber === "+38971294914") {
-        console.warn('⚠️ WARNING: Please update WhatsApp phone number in whatsapp.js!');
-    }
+            if (!WHATSAPP_CONFIG.phoneNumber || WHATSAPP_CONFIG.phoneNumber === "+38972533033") {
+            console.warn('⚠️ WARNING: Please update WhatsApp phone number in whatsapp.js!');
+        }
     
     console.log('📱 WhatsApp booking system initialized');
 });
